@@ -18,7 +18,7 @@ const projectCollection = defineCollection({
 	// Type-check frontmatter using a schema
 	schema: z.object({
 		title: z.string(),
-		description: z.string(),
+		description: z.string().optional(),
 		heroImage: z.string().optional(),
 		relatedPosts: z.array(reference('blog')).optional(),
 	}),

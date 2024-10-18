@@ -16,10 +16,10 @@ const blogCollection = defineCollection({
 const projectCollection = defineCollection({
 	type: 'content',
 	// Type-check frontmatter using a schema
-	schema: z.object({
+	schema: ({ image }) => z.object({
 		title: z.string(),
 		description: z.string().optional(),
-		heroImage: z.string().optional(),
+		heroImage: image().optional(),
 		relatedPosts: z.array(reference('blog')).optional(),
 	}),
 });

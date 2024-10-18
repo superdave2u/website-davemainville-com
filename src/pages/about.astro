@@ -1,42 +1,90 @@
 ---
-import Layout from '../layouts/BlogPost.astro';
+import Layout from "../layouts/BlogPost.astro";
+const pubDate = new Date("2024-10-01");
 ---
 
 <Layout
-	title="About Me"
-	description="Dave Mainville"
-	heroImage="/blog-placeholder-about.jpg"
+  title="About Me"
+  description="Dave Mainville"
+  heroImage="/blog-placeholder-about.jpg"
+  pubDate={pubDate}
 >
+  <p>I thrive on helping to empower individuals and business.</p>
 
-<p>I thrive on creating solutions that empower individuals and business, always aiming to push the boundaries of what's possible.</p>
+  <p>
+    See what I'm working on by following my <a href="/projects">projects</a>.
 
-<p>See what I'm working on by following my <a href="/projects">projects</a>.
+    <h3>My Values</h3>
+    <ul>
+      <li>
+        <strong>Agency &amp; Freedom:</strong> I believe in taking control of one's
+        destiny and supporting others to do the same.
+      </li>
+      <li>
+        <strong>Transparency &amp; Honesty:</strong> Open communication builds trust
+        and meaningful connections.
+      </li>
+      <li>
+        <strong>Honor &amp; Humility:</strong> Leading by example and valuing everyone's
+        contributions is key to collective success.
+      </li>
+      <li>
+        <strong>Generosity:</strong> Sharing time, knowledge, and resources enriches
+        our communities.
+      </li>
+      <li>
+        <strong>Adventure:</strong> Embracing new experiences keeps life exciting
+        and fosters growth.
+      </li>
+    </ul>
 
-<h3>My Values</h3>
-<ul>
-	<li><strong>Agency &amp; Freedom:</strong> I believe in taking control of one's destiny and supporting others to do the same.</li>
-	<li><strong>Transparency &amp; Honesty:</strong> Open communication builds trust and meaningful connections.</li>
-	<li><strong>Honor &amp; Humility:</strong> Leading by example and valuing everyone's contributions is key to collective success.</li>
-	<li><strong>Generosity:</strong> Sharing time, knowledge, and resources enriches our communities.</li>
-	<li><strong>Adventure:</strong> Embracing new experiences keeps life exciting and fosters growth.</li>
-</ul>
+    <h3>My Professional Journey</h3>
+    <p>
+      As a seasoned full-stack developer, I've built a career on curiosity and a
+      love for solving complex problems. My expertise includes:
+    </p>
+    <ul>
+      <li>
+        <strong>Programming:</strong> Developing robust applications across the full
+        tech stack.
+      </li>
+      <li>
+        <strong>Cloud Infrastructure:</strong> Specializing in AWS and Azure environments.
+      </li>
+      <li>
+        <strong>DevOps Tools:</strong> Proficient with Terraform for Infrastructure
+        as Code, Kubernetes orchestration, and CI/CD pipelines using GitLab and GitHub
+        automation.
+      </li>
+    </ul>
 
-<h3>My Professional Journey</h3>
-<p>As a seasoned full-stack developer, I've built a career on curiosity and a love for solving complex problems. My expertise includes:</p>
-<ul>
-	<li><strong>Programming:</strong> Developing robust applications across the full tech stack.</li>
-	<li><strong>Cloud Infrastructure:</strong> Specializing in AWS and Azure environments.</li>
-	<li><strong>DevOps Tools:</strong> Proficient with Terraform for Infrastructure as Code, Kubernetes orchestration, and CI/CD pipelines using GitLab and GitHub automation.</li>
-</ul>
-
-<h3>Beyond the Screen</h3>
-<p>Life is an adventure, and I embrace it through various hobbies:</p>
-<ul>
-	<li><strong>Home Lab Projects:</strong> Experimenting with multi-node setups for Home Assistant, Plex, and development environments fuels my continuous learning.</li>
-	<li><strong>PC Gaming:</strong> A medium to experience the best of storytelling and collaborate with friends out of state.</li>
-	<li><strong>FPV Race Drones:</strong> Building and piloting drones combines my technical skills with a thrill for exploration.</li>
-	<li><strong>Disc Golf:</strong> This sport keeps me grounded, focused, and connected with nature.</li>
-	<li><strong>Target Shooting:</strong> It sharpens my discipline and precision.</li>
-	<li><strong>Photography:</strong> Capturing macro and candid moments allows me to see the world through a unique lens.</li>
-</ul>
+    <h3>Leisure</h3>
+    <p>Life is an adventure, and I enjoy it through various hobbies:</p>
+    <ul>
+      <li>
+        <strong>PC Gaming:</strong> My Preferred medium to experience the best of
+        storytelling and connect with friends out of state.
+      </li>
+      <li>
+        <strong>Home Lab Projects:</strong> Experimenting with multi-node setups
+        for Home Assistant, Plex, and development environments to fuel my side projects
+        and continuous learning.
+      </li>
+      <li>
+        <strong>FPV Race Drones:</strong> Building and piloting drones combines my
+        technical skills with a thrill for exploration.
+      </li>
+      <li>
+        <strong>Disc Golf:</strong> This sport keeps me grounded, focused, and connected
+        with nature.
+      </li>
+      <li>
+        <strong>Target Shooting:</strong> It sharpens my discipline and precision.
+      </li>
+      <li>
+        <strong>Photography:</strong> Capturing macro and candid moments allows me
+        to see the world through a unique lens.
+      </li>
+    </ul>
+  </p>
 </Layout>

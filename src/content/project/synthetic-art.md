@@ -10,6 +10,8 @@ Throughout this process, I enjoy refining my skills in **prompt engineering**, l
 
 Each collection stands alone, representing a snapshot of my interests and growth at that time. Together, they form a diverse portfolio that reflects my passion for innovation, storytelling, and artistic expression.
 
+[Open the gallery on Facebook](https://www.facebook.com/profile.php?id=61552743182916)
+
 ---
 
 ### **Bassinet Collections**

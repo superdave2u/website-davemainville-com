@@ -1,12 +1,16 @@
 ---
-title: 'The Momentum Institute'
+title: "The Momentum Institute"
 # description: 'Here is a sample of some basic Markdown syntax that can be used when writing Markdown content in Astro.'
-heroImage: '../../../public/project/momentum-institute.webp'
+heroImage: "../../../public/project/momentum-institute.webp"
 ---
 
-Every man has the potential to lead a life of meaning, confidence, and integrity. I help others discover and align their life's mission within 12 weeks without feeling lost or overwhelmed so that they can live a life filled with meaning and satisfaction.
+I believe every man has the potential to lead a life of meaning & integrity.
 
-After years in the tech industry, I realized that true success isn't just about professional achievements—it's about living a life aligned with one's values and purpose. Combining my analytical systems-minded background with a passion for personal growth, I established Momentum Institute to guide others on a unique 3-tier transformative experience.
+Through the Momentum Institute, I help others discover and align their life's mission without feeling lost or overwhelmed so that they can live a life full of satisfaction.
+
+After years in the tech industry, I realized that true success isn't just about professional achievements—it's about living aligned with one's values and purpose.
+
+Combining my analytical systems-minded background with a passion for personal growth, I established the C4 Framework to help guide others from overwhelmed frustrations to connected and fulfilled. This framework is the foundations to all of the programs offered through the Momentum Institute.
 
 **Highlights**
 
@@ -47,7 +51,7 @@ I believe that a life without a clear personal code is like a ship without a com
 - Boundary Setting: Learn to establish healthy boundaries that honor your personal code.
 - Expert Guidance: Benefit from the experience and insights of seasoned coaches.
 - Supportive Environment: Join a community committed to growth and self-discovery.
-- Lasting Impact: Equip yourself with tools and knowledge that will serve you for a lifetime.    
+- Lasting Impact: Equip yourself with tools and knowledge that will serve you for a lifetime.
 
 ---
 
@@ -55,7 +59,7 @@ I believe that a life without a clear personal code is like a ship without a com
 
 ![Momentum: SPRINT](../../../public/project/sprint.webp)
 
-SPRINT builds on the foundation of IGNITION to focus on setting and advancing meaningful goals through discipline and consistency. 
+SPRINT builds on the foundation of IGNITION to focus on setting and advancing meaningful goals through discipline and consistency.
 
 Achieving meaningful goals requires more than just intention—it demands action, discipline, and unwavering commitment. SPRINT is designed to instill these qualities, propelling you toward success.
 

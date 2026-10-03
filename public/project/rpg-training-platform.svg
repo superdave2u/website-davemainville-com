@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="A session board with progress, risk, and time-pressure meters, a brief-act-resolve-review phase stepper, role cards with limited-use tools, a d20 die, and a replay timeline">
+  <defs>
+    <linearGradient id="rbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f5ee"/>
+      <stop offset="1" stop-color="#efe8d8"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#rbg)"/>
+
+  <g transform="translate(120 220)">
+    <polygon points="0,-78 68,-24 42,60 -42,60 -68,-24" fill="#1a2440" stroke="#4f6bff" stroke-width="3"/>
+    <polygon points="0,-78 68,-24 0,10 -68,-24" fill="none" stroke="#4fc3dd" stroke-width="2.5"/>
+    <polygon points="0,10 68,-24 42,60" fill="none" stroke="#4fc3dd" stroke-width="2.5"/>
+    <polygon points="0,10 -68,-24 -42,60" fill="none" stroke="#4fc3dd" stroke-width="2.5"/>
+    <polygon points="0,10 42,60 -42,60" fill="none" stroke="#4fc3dd" stroke-width="2.5"/>
+    <text x="0" y="24" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">d20</text>
+  </g>
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <text x="120" y="336" font-size="16" font-weight="600" fill="#3c4043">one action per player</text>
+    <text x="120" y="357" font-size="16" font-weight="600" fill="#3c4043">only allowed options</text>
+  </g>
+
+  <rect x="270" y="64" width="520" height="382" rx="16" fill="#ffffff" stroke="#c9b28a" stroke-width="2.5"/>
+  <text x="296" y="102" font-family="Roboto, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="3" fill="#8a6d3b">SESSION BOARD</text>
+
+  <g font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#3c4043">
+    <text x="296" y="146">PROGRESS</text>
+    <rect x="420" y="132" width="250" height="16" rx="8" fill="#e6f4ea" stroke="#34a853" stroke-width="2"/>
+    <rect x="420" y="132" width="150" height="16" rx="8" fill="#34a853"/>
+    <text x="692" y="146" fill="#137333">+1</text>
+
+    <text x="296" y="186">RISK</text>
+    <rect x="420" y="172" width="250" height="16" rx="8" fill="#fdeceb" stroke="#e05a52" stroke-width="2"/>
+    <rect x="420" y="172" width="180" height="16" rx="8" fill="#e05a52"/>
+    <text x="692" y="186" fill="#b03a33">+1</text>
+
+    <text x="296" y="226">TIME PRESSURE</text>
+    <rect x="420" y="212" width="250" height="16" rx="8" fill="#fef7e0" stroke="#f9ab00" stroke-width="2"/>
+    <rect x="420" y="212" width="90" height="16" rx="8" fill="#f9ab00"/>
+    <text x="692" y="226" fill="#b06000">−1</text>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle">
+    <rect x="296" y="258" width="106" height="34" rx="17" fill="#eef1f8" stroke="#c3cbe8" stroke-width="2"/>
+    <text x="349" y="280" fill="#6b7699">BRIEF</text>
+    <rect x="418" y="252" width="116" height="40" rx="20" fill="#4f6bff"/>
+    <text x="476" y="278" fill="#ffffff">ACT</text>
+    <rect x="550" y="258" width="106" height="34" rx="17" fill="#eef1f8" stroke="#c3cbe8" stroke-width="2"/>
+    <text x="603" y="280" fill="#6b7699">RESOLVE</text>
+    <rect x="672" y="258" width="106" height="34" rx="17" fill="#eef1f8" stroke="#c3cbe8" stroke-width="2"/>
+    <text x="725" y="280" fill="#6b7699">REVIEW</text>
+    <polygon points="408,272 416,276 408,280" fill="#c3cbe8"/>
+    <polygon points="640,272 648,276 640,280" fill="#c3cbe8"/>
+    <polygon points="662,272 670,276 662,280" fill="#c3cbe8"/>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif">
+    <rect x="296" y="316" width="230" height="104" rx="12" fill="#f8f5ee" stroke="#c9b28a" stroke-width="2"/>
+    <text x="314" y="344" font-size="16" font-weight="700" fill="#1a2440">Navigator</text>
+    <text x="314" y="366" font-size="13" fill="#57606a">clear plan · calm voice</text>
+    <text x="314" y="388" font-size="13" fill="#57606a">limit: can miss side effects</text>
+    <text x="314" y="410" font-size="13" font-weight="700" fill="#4f6bff">Quick Map × 1</text>
+
+    <rect x="540" y="316" width="230" height="104" rx="12" fill="#f8f5ee" stroke="#c9b28a" stroke-width="2"/>
+    <text x="558" y="344" font-size="16" font-weight="700" fill="#1a2440">Analyst</text>
+    <text x="558" y="366" font-size="13" fill="#57606a">careful review · strong notes</text>
+    <text x="558" y="388" font-size="13" fill="#57606a">limit: can slow the pace</text>
+    <text x="558" y="410" font-size="13" font-weight="700" fill="#4fc3dd">Signal Scan × 2</text>
+  </g>
+
+  <g transform="translate(850 100)">
+    <text x="0" y="0" font-family="Roboto, Arial, sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#8a6d3b">REPLAY</text>
+    <line x1="10" y1="20" x2="10" y2="300" stroke="#c9b28a" stroke-width="3"/>
+    <circle cx="10" cy="34" r="9" fill="#4f6bff"/>
+    <circle cx="10" cy="86" r="9" fill="#4fc3dd"/>
+    <circle cx="10" cy="138" r="9" fill="#e8a04c"/>
+    <circle cx="10" cy="190" r="9" fill="#8250df"/>
+    <circle cx="10" cy="242" r="9" fill="#34a853"/>
+    <text x="32" y="39" font-family="Roboto, Arial, sans-serif" font-size="13" fill="#57606a">SessionCreated</text>
+    <text x="32" y="91" font-family="Roboto, Arial, sans-serif" font-size="13" fill="#57606a">ActionSubmitted</text>
+    <text x="32" y="143" font-family="Roboto, Arial, sans-serif" font-size="13" fill="#57606a">MeterChanged</text>
+    <text x="32" y="195" font-family="Roboto, Arial, sans-serif" font-size="13" fill="#57606a">ToolUsed</text>
+    <text x="32" y="247" font-family="Roboto, Arial, sans-serif" font-size="13" fill="#57606a">ReportGenerated</text>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="270" y="466" width="520" height="0" fill="none"/>
+    <text x="530" y="478" font-size="17" font-weight="700" fill="#1a2440">No LLMs at the table — reasoning is the game.</text>
+  </g>
+</svg>

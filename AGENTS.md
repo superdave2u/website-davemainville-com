@@ -39,6 +39,9 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | visual-timer | visual-timer | Mar 22 2026 |
 | downscale-videos | downscale-videos | May 25 2026 (repo flipped public at publish) |
 | todoist-workflowy-transfer | todoist-workflowy-transfer | Aug 13 2026 (repo flipped public at publish) |
+| coming-home | coming-home | Aug 20 2026 |
+| good-judgments-workshop | good-judgments-workshop | Sep 03 2026 |
+| google-photos-audit | google-photos-audit | Sep 03 2026 (repo flipped public at publish) |
 
 ## Environment quirks (learned the hard way)
 

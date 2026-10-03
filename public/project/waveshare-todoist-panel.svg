@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="The Waveshare ESP32-S3 panel beside an LLM bench-loop diagram: beads backlog, agent iteration, compile gate, flash, and operator handoff">
+  <defs>
+    <linearGradient id="wbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f6f7f4"/>
+      <stop offset="1" stop-color="#eaece4"/>
+    </linearGradient>
+    <linearGradient id="wscreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdfdfa"/>
+      <stop offset="1" stop-color="#f2f3ec"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#wbg)"/>
+
+  <g>
+    <rect x="60" y="70" width="360" height="290" rx="18" fill="#2a2d33"/>
+    <rect x="76" y="86" width="328" height="258" rx="10" fill="url(#wscreen)" stroke="#4a4e57" stroke-width="2"/>
+    <text x="90" y="112" font-family="Roboto Mono, monospace" font-size="16" font-weight="700" fill="#1a1c20">TODOIST</text>
+    <circle cx="374" cy="106" r="9" fill="none" stroke="#1a1c20" stroke-width="2.5"/>
+    <path d="M 370 106 a 4 4 0 0 1 8 0" fill="#1a1c20"/>
+    <text x="202" y="142" font-family="Roboto Mono, monospace" font-size="15" font-weight="700" fill="#1a1c20">&lt; TODAY &gt;</text>
+    <g font-family="Roboto Mono, monospace" font-size="13" fill="#1a1c20">
+      <text x="98" y="176">[ ] Ship firmware v0.3</text>
+      <text x="112" y="194" font-size="11" fill="#6b7078">Today</text>
+      <text x="98" y="228">[ ] Review ST7305 pull-up</text>
+      <text x="112" y="246" font-size="11" fill="#6b7078">Work</text>
+      <text x="98" y="280">[ ] Order 18650 holder</text>
+      <text x="112" y="298" font-size="11" fill="#6b7078">4:00 PM</text>
+      <text x="98" y="330">[ ] Write bench handoff note</text>
+      <text x="112" y="348" font-size="11" fill="#6b7078">Home Lab</text>
+    </g>
+    <rect x="76" y="368" width="328" height="24" fill="#1a1c20"/>
+    <text x="88" y="385" font-family="Roboto Mono, monospace" font-size="11" fill="#fdfdfa">1/4     8 tasks     Updated 10:42</text>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif">
+    <rect x="486" y="120" width="120" height="42" rx="21" fill="#ffffff" stroke="#4f6bff" stroke-width="2.5"/>
+    <text x="546" y="147" text-anchor="middle" font-size="16" font-weight="700" fill="#3b55e0">beads</text>
+    <line x1="612" y1="141" x2="664" y2="141" stroke="#4f6bff" stroke-width="3.5"/>
+    <polygon points="664,141 652,135 652,147" fill="#4f6bff"/>
+
+    <rect x="668" y="98" width="180" height="86" rx="14" fill="#1a2440"/>
+    <text x="758" y="128" text-anchor="middle" font-size="15" font-weight="700" fill="#ffffff">LLM agent</text>
+    <text x="758" y="150" text-anchor="middle" font-size="12" fill="#9aa7c9">claims a bead · writes</text>
+    <text x="758" y="168" text-anchor="middle" font-size="12" fill="#9aa7c9">code · runs the gate</text>
+
+    <line x1="758" y1="184" x2="758" y2="226" stroke="#4fc3dd" stroke-width="3.5"/>
+    <polygon points="758,226 752,214 764,214" fill="#4fc3dd"/>
+
+    <rect x="678" y="230" width="160" height="76" rx="14" fill="#ffffff" stroke="#4fc3dd" stroke-width="2.5"/>
+    <text x="758" y="258" text-anchor="middle" font-size="15" font-weight="700" fill="#2b7f96">compile gate</text>
+    <text x="758" y="280" text-anchor="middle" font-size="12" fill="#57606a">pio run · native tests</text>
+    <text x="758" y="296" text-anchor="middle" font-size="12" fill="#57606a">commit as evidence</text>
+
+    <line x1="678" y1="268" x2="626" y2="268" stroke="#e8a04c" stroke-width="3.5"/>
+    <polygon points="626,268 638,262 638,274" fill="#e8a04c"/>
+
+    <rect x="486" y="240" width="140" height="60" rx="14" fill="#ffffff" stroke="#e8a04c" stroke-width="2.5"/>
+    <text x="556" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#b0762a">flash</text>
+    <text x="556" y="286" text-anchor="middle" font-size="12" fill="#57606a">needs-human bead</text>
+
+    <line x1="486" y1="270" x2="434" y2="270" stroke="#34a853" stroke-width="3.5"/>
+    <polygon points="434,270 446,264 446,276" fill="#34a853"/>
+
+    <rect x="314" y="240" width="120" height="60" rx="14" fill="#dcfce7" stroke="#34a853" stroke-width="2.5"/>
+    <text x="374" y="266" text-anchor="middle" font-size="15" font-weight="700" fill="#166534">operator</text>
+    <text x="374" y="286" text-anchor="middle" font-size="12" fill="#3a5c47">bench verify → close</text>
+
+    <path d="M 374 240 C 374 200, 440 190, 480 176" fill="none" stroke="#34a853" stroke-width="3" stroke-dasharray="6 5"/>
+    <polygon points="486,174 472,170 476,182" fill="#34a853"/>
+    <text x="352" y="322" font-size="12" font-weight="600" fill="#3a5c47">loop reruns until backlog drains</text>
+  </g>
+
+  <g font-family="Roboto Mono, monospace" font-size="13" fill="#57606a">
+    <text x="486" y="352">phases: ✅ bring-up ✅ wifi ✅ todoist-api ✅ app-model ✅ filters</text>
+    <text x="486" y="376">active: phase-7 task display · next: physical controls</text>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="255" y="430" width="510" height="46" rx="23" fill="#ffffff" stroke="#c9b28a" stroke-width="2"/>
+    <text x="510" y="459" font-size="17" font-weight="700" fill="#8a6d3b">400×300 reflective LCD · no backlight · no companion computer</text>
+  </g>
+</svg>

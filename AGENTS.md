@@ -45,6 +45,10 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | google-photos-audit | google-photos-audit | Sep 03 2026 (repo flipped public at publish) |
 | rpg-training-platform | rpg-training-platform | Sep 03 2026 |
 | waveshare-todoist-panel | waveshare-todoist-panel | Sep 14 2026 (in development; SSID in ERROR.md left as-is per Dave) |
+| fire-target-tracker | fire-target-tracker | Sep 23 2026 (spec-only repo, no code — companion to fire-and-strike) |
+| dvd-backup-pipeline | dvd-backup-pipeline | Sep 23 2026 (repo flipped public at publish; uses downscale-videos) |
+| fire-and-strike | fire-and-strike | Sep 24 2026 |
+| proof | proof | Sep 25 2026 |
 
 ## Environment quirks (learned the hard way)
 

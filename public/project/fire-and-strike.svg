@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="A Monte Carlo fan chart with p10, p50, and p90 portfolio paths reaching the FIRE number line, with a strike arrow marking the target retirement age">
+  <defs>
+    <linearGradient id="sbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f5f7fb"/>
+      <stop offset="1" stop-color="#e8edf6"/>
+    </linearGradient>
+    <linearGradient id="fan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4f6bff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#4fc3dd" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#sbg)"/>
+
+  <g>
+    <line x1="120" y1="420" x2="920" y2="420" stroke="#c3cbe8" stroke-width="2.5"/>
+    <line x1="120" y1="180" x2="920" y2="180" stroke="#8a6d3b" stroke-width="2.5" stroke-dasharray="8 6"/>
+    <text x="128" y="168" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#8a6d3b">FIRE number — spending × 25</text>
+
+    <path d="M 120 415 C 300 400, 500 360, 660 300 C 760 260, 840 220, 920 196 L 920 320 C 830 340, 740 356, 640 372 C 480 392, 280 408, 120 415 Z" fill="url(#fan)"/>
+
+    <path d="M 120 415 C 300 406, 520 380, 700 336 C 790 314, 860 296, 920 282" fill="none" stroke="#4f6bff" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 120 415 C 300 398, 480 350, 640 296 C 750 258, 850 220, 920 196" fill="none" stroke="#4fc3dd" stroke-width="4" stroke-linecap="round"/>
+    <path d="M 120 415 C 280 404, 460 386, 620 366 C 740 350, 850 338, 920 330" fill="none" stroke="#34a853" stroke-width="3.5" stroke-dasharray="3 6" stroke-linecap="round"/>
+
+    <g font-family="Roboto Mono, monospace" font-size="14" font-weight="700">
+      <text x="846" y="188" fill="#2b7f96">p10 · age 61</text>
+      <text x="840" y="286" fill="#3b55e0">p50 · age 54</text>
+      <text x="838" y="352" fill="#2c6e53">p90 · age 47</text>
+    </g>
+
+    <line x1="660" y1="150" x2="660" y2="420" stroke="#e05a52" stroke-width="2.5" stroke-dasharray="4 5"/>
+    <g transform="translate(660 128)">
+      <rect x="-92" y="-20" width="184" height="30" rx="15" fill="#ffffff" stroke="#e05a52" stroke-width="2"/>
+      <text x="0" y="0" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#b03a33">STRIKE target: retire by 52</text>
+    </g>
+    <path d="M 300 400 L 654 246" fill="none" stroke="#e05a52" stroke-width="3" stroke-dasharray="6 5"/>
+    <polygon points="660,240 644,242 652,256" fill="#e05a52"/>
+    <text x="380" y="304" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="700" fill="#b03a33">+$4,900/yr accelerates the median</text>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="255" y="452" width="510" height="42" rx="21" fill="#ffffff" stroke="#c3cbe8" stroke-width="2"/>
+    <text x="510" y="479" font-size="15" font-weight="600" fill="#3b4a8c">Monte Carlo · seeded · p10 / p50 / p90 · draft-then-calculate</text>
+  </g>
+</svg>

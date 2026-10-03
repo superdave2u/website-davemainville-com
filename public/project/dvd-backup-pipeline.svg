@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="The DVD pipeline: a hand loading a disc tray, rip worker ejecting into a pending/claimed/failed queue, encode worker filing into a Plex-style shelf, with Wikipedia year lookup">
+  <defs>
+    <linearGradient id="dbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f8"/>
+      <stop offset="1" stop-color="#e6ebf0"/>
+    </linearGradient>
+    <linearGradient id="dshelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f6bff"/>
+      <stop offset="1" stop-color="#3b55e0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#dbg)"/>
+
+  <g>
+    <rect x="50" y="150" width="190" height="120" rx="12" fill="#3a3f4a"/>
+    <rect x="74" y="196" width="142" height="26" rx="6" fill="#22252c"/>
+    <rect x="78" y="200" width="134" height="18" rx="4" fill="#c9d4e2"/>
+    <text x="145" y="298" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#4a5160">the drive bay</text>
+
+    <g transform="translate(120 92)">
+      <path d="M 0 24 C 6 6, 26 2, 34 12 L 60 12 L 60 30 L 14 30 C 4 30, -4 28, 0 24 Z" fill="#e8b088"/>
+      <rect x="34" y="14" width="26" height="16" rx="3" fill="#d9a373" transform="rotate(-8 47 22)"/>
+      <text x="30" y="-6" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="13" font-weight="700" fill="#4a5160">human in the middle</text>
+      <text x="30" y="58" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" fill="#7a8494">load tray → walk away</text>
+    </g>
+  </g>
+
+  <line x1="240" y1="210" x2="300" y2="210" stroke="#4f6bff" stroke-width="4"/>
+  <polygon points="300,210 288,204 288,216" fill="#4f6bff"/>
+
+  <g>
+    <rect x="306" y="120" width="200" height="180" rx="14" fill="#ffffff" stroke="#4f6bff" stroke-width="2.5"/>
+    <text x="326" y="150" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#3b55e0">RIP WORKER</text>
+    <g font-family="Roboto, Arial, sans-serif" font-size="12.5" fill="#4a5160">
+      <text x="326" y="176">MakeMKV → raw MKVs</text>
+      <text x="326" y="196">movie or TV season?</text>
+      <text x="326" y="216">Plex naming</text>
+      <text x="326" y="236">year from Wikipedia/</text>
+      <text x="326" y="254">Wikidata (cached)</text>
+      <text x="326" y="280" font-weight="700" fill="#2b7f96">eject immediately</text>
+    </g>
+  </g>
+
+  <line x1="506" y1="210" x2="566" y2="210" stroke="#4f6bff" stroke-width="4"/>
+  <polygon points="566,210 554,204 554,216" fill="#4f6bff"/>
+
+  <g>
+    <rect x="572" y="120" width="180" height="180" rx="14" fill="#ffffff" stroke="#4fc3dd" stroke-width="2.5"/>
+    <text x="592" y="150" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#2b7f96">DISK QUEUE</text>
+    <g font-family="Roboto Mono, monospace" font-size="12">
+      <rect x="592" y="164" width="140" height="26" rx="6" fill="#e6f4ea" stroke="#34a853" stroke-width="1.5"/>
+      <text x="602" y="181" fill="#137333">pending/*.json</text>
+      <rect x="592" y="198" width="140" height="26" rx="6" fill="#fef7e0" stroke="#f9ab00" stroke-width="1.5"/>
+      <text x="602" y="215" fill="#b06000">claimed/*.json</text>
+      <rect x="592" y="232" width="140" height="26" rx="6" fill="#fdeceb" stroke="#e05a52" stroke-width="1.5"/>
+      <text x="602" y="249" fill="#b03a33">failed/*.json</text>
+    </g>
+    <text x="662" y="282" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11.5" fill="#57606a">decoupled: rip ≠ transcode</text>
+  </g>
+
+  <line x1="752" y1="210" x2="812" y2="210" stroke="#4f6bff" stroke-width="4"/>
+  <polygon points="812,210 800,204 800,216" fill="#4f6bff"/>
+
+  <g>
+    <rect x="818" y="120" width="152" height="180" rx="14" fill="#ffffff" stroke="#e8a04c" stroke-width="2.5"/>
+    <text x="894" y="150" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#b0762a">ENCODE</text>
+    <g font-family="Roboto, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#4a5160">
+      <text x="894" y="176">HandBrake / ffmpeg</text>
+      <text x="894" y="196">720p ceiling · CRF 20</text>
+      <text x="894" y="216">→ downscale-videos</text>
+      <text x="894" y="236">prescription</text>
+      <text x="894" y="266" font-weight="700" fill="#137333">atomic move to Plex</text>
+    </g>
+  </g>
+
+  <g>
+    <rect x="140" y="356" width="740" height="94" rx="12" fill="url(#dshelf)"/>
+    <g font-family="Roboto, Arial, sans-serif">
+      <rect x="170" y="382" width="200" height="44" rx="6" fill="#ffffff"/>
+      <text x="182" y="400" font-size="11.5" font-weight="700" fill="#1a2440">Movie (Year).mkv</text>
+      <text x="182" y="416" font-size="10" fill="#57606a">main feature · Plex share</text>
+      <rect x="400" y="382" width="240" height="44" rx="6" fill="#ffffff"/>
+      <text x="412" y="400" font-size="11.5" font-weight="700" fill="#1a2440">Show\Season 01\S01E01</text>
+      <text x="412" y="416" font-size="10" fill="#57606a">every episode title · TV layout</text>
+      <rect x="670" y="382" width="180" height="44" rx="6" fill="#eef1f8"/>
+      <text x="682" y="400" font-size="11.5" font-weight="700" fill="#3b55e0">movie-map.csv</text>
+      <text x="682" y="416" font-size="10" fill="#57606a">tv-map.csv · overrides</text>
+    </g>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="255" y="466" width="510" height="36" rx="18" fill="#ffffff" stroke="#c9d4e2" stroke-width="1.5"/>
+    <text x="510" y="490" font-size="14" font-weight="600" fill="#3b4a8c">400 DVDs · decades of "I'll rip them someday" · one tray at a time</text>
+  </g>
+</svg>

@@ -2,7 +2,7 @@
 title: 'Downscale Videos'
 description: 'A Python + FFmpeg batch normalizer that standardizes video files across my network for streaming — capped resolution, framerate, and audio bitrate, applied only where needed.'
 heroImage: '../../../public/project/downscale-videos.svg'
-relatedPosts: ['downscale-videos']
+relatedPosts: ['downscale-videos', 'dvd-backup-pipeline']
 ---
 
 **Downscale Videos** is my helper tool for videos ripped from DVDs or obtained from other sources, standardizing them across my network for streaming. One prescription — capped resolution (480p), framerate (24 fps), and audio bitrate (96 kbps), plus optional CRF compression — applied recursively and idempotently: compliant files are skipped, originals are replaced only after a successful transcode.

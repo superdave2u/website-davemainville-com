@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="A fanned hand of collectible invitation cards in five territory colors with two prismatic wilds, one card flipped showing a quest and proof of life">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f7f5f2"/>
+      <stop offset="1" stop-color="#ece7df"/>
+    </linearGradient>
+    <linearGradient id="prismatic" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f87171"/>
+      <stop offset="0.35" stop-color="#fbbf24"/>
+      <stop offset="0.65" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#pbg)"/>
+
+  <g>
+    <g transform="rotate(-14 250 260)">
+      <rect x="190" y="130" width="150" height="230" rx="12" fill="#fff5f5" stroke="#e05a6a" stroke-width="3"/>
+      <text x="265" y="170" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#c23b4e">♥</text>
+      <text x="265" y="205" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#7c3a44">PLEASURE</text>
+      <text x="265" y="222" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#a3707a">desire · 01–10</text>
+    </g>
+    <g transform="rotate(-7 360 250)">
+      <rect x="295" y="128" width="150" height="232" rx="12" fill="#f2f6ff" stroke="#3b55e0" stroke-width="3"/>
+      <text x="370" y="168" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#3b55e0">◉</text>
+      <text x="370" y="203" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#2c4aa8">CURIOSITY</text>
+      <text x="370" y="220" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#5a6f9e">discovery · 11–20</text>
+    </g>
+    <g transform="rotate(0 475 245)">
+      <rect x="400" y="124" width="150" height="236" rx="12" fill="#fffaeb" stroke="#d9a013" stroke-width="3"/>
+      <text x="475" y="164" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#c99a12">✦</text>
+      <text x="475" y="199" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#8a6d1f">BEAUTY</text>
+      <text x="475" y="216" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#a08a4a">attention · 21–30</text>
+      <text x="475" y="258" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="600" fill="#8a6d1f">an invitation</text>
+      <text x="475" y="298" text-anchor="middle" font-family="Roboto Mono, monospace" font-size="10" fill="#6b5c34">PROOF OF LIFE:</text>
+      <text x="475" y="314" text-anchor="middle" font-family="Roboto Mono, monospace" font-size="10" fill="#6b5c34">the evidence is</text>
+      <text x="475" y="330" text-anchor="middle" font-family="Roboto Mono, monospace" font-size="10" fill="#6b5c34">the life that happened</text>
+    </g>
+    <g transform="rotate(7 590 250)">
+      <rect x="525" y="128" width="150" height="232" rx="12" fill="#f2fbf5" stroke="#1a9a5b" stroke-width="3"/>
+      <text x="600" y="168" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#1a9a5b">∞</text>
+      <text x="600" y="203" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#166534">CONNECTION</text>
+      <text x="600" y="220" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#4d8a68">belonging · 31–40</text>
+    </g>
+    <g transform="rotate(14 700 260)">
+      <rect x="630" y="130" width="150" height="230" rx="12" fill="#f8f4ff" stroke="#8250df" stroke-width="3"/>
+      <text x="705" y="170" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="26" fill="#8250df">✧</text>
+      <text x="705" y="205" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="12" font-weight="700" fill="#6639ba">WONDER</text>
+      <text x="705" y="222" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#7a68a3">awe · 41–50</text>
+    </g>
+    <g transform="rotate(22 810 280) translate(40 8)">
+      <rect x="740" y="150" width="140" height="215" rx="12" fill="#111111" stroke="url(#prismatic)" stroke-width="4"/>
+      <text x="810" y="196" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="24" fill="url(#prismatic)">✵</text>
+      <text x="810" y="228" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="11" font-weight="700" fill="#e8e4da">PROOF OF LIFE</text>
+      <text x="810" y="246" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="10" fill="#a89f92">mythic · 52</text>
+      <text x="810" y="290" text-anchor="middle" font-family="Roboto Mono, monospace" font-size="9.5" fill="#cfc8bc">I WANTED THIS.</text>
+      <text x="810" y="306" text-anchor="middle" font-family="Roboto Mono, monospace" font-size="9.5" fill="#cfc8bc">THAT WAS ENOUGH.</text>
+    </g>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="150" y="418" width="720" height="52" rx="14" fill="#ffffff" stroke="#d5cfc4" stroke-width="2"/>
+    <text x="510" y="440" font-size="15" font-weight="700" fill="#4a4438">UNDISCOVERED → DRAWN → LIVED</text>
+    <text x="510" y="460" font-size="12.5" fill="#7a7263">52 real-world missions · no points · no deadlines · evidence in the Archive</text>
+  </g>
+</svg>

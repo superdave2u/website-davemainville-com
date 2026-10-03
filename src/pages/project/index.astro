@@ -7,7 +7,28 @@ import { getCollection } from "astro:content";
 
 import { Image } from "astro:assets";
 
-const posts = await getCollection("project");
+const posts = await (async () => {
+  const [projects, blogPosts] = await Promise.all([
+    getCollection("project"),
+    getCollection("blog"),
+  ]);
+  const pubDateBySlug = new Map(blogPosts.map((post) => [post.slug, post.data.pubDate.valueOf()]));
+  // Order the grid to match the blog page: a project with exactly one related
+  // post follows that post's pubDate; everything else keeps collection order.
+  const withKeys = projects.map((project, index) => {
+    const related = project.data.relatedPosts ?? [];
+    const sortDate = related.length === 1 ? pubDateBySlug.get(related[0].slug) : undefined;
+    return { project, sortDate, index };
+  });
+  return withKeys
+    .sort((a, b) => {
+      if (a.sortDate !== undefined || b.sortDate !== undefined) {
+        return (b.sortDate ?? -Infinity) - (a.sortDate ?? -Infinity);
+      }
+      return a.index - b.index;
+    })
+    .map((entry) => entry.project);
+})();
 ---
 
 <!doctype html>

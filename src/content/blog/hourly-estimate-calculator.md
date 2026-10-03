@@ -1,7 +1,7 @@
 ---
 title: 'Quantifying the Fog: Gut Instinct Plus Delta for Better Estimates'
 description: 'I built an experiment that treats a gut-instinct estimate as a base and adjusts it with a Delta derived from four factors — expertise, process familiarity, execution frequency, and clarity of done — producing an honest optimistic-to-pessimistic range instead of a hopeful number.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Sep 12 2025'
 heroImage: '/project/hourly-estimate.svg'
 tags: ['estimation', 'vue', 'javascript', 'side-projects']
 ---

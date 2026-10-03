@@ -1,7 +1,7 @@
 ---
 title: 'One Prescription for Every Video: Standardizing a Home Streaming Library'
 description: 'DVD rips and files from every source at every quality converge on my media server. I wrote a Python + FFmpeg batch normalizer that imposes one prescription — capped resolution, framerate, and audio bitrate — only on the files that need it, newest first, with atomic replaces and live progress.'
-pubDate: 'Oct 03 2026'
+pubDate: 'May 25 2026'
 heroImage: '/project/downscale-videos.svg'
 tags: ['python', 'ffmpeg', 'home-lab', 'side-projects']
 ---

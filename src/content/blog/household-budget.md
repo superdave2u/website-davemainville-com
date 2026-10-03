@@ -1,7 +1,7 @@
 ---
 title: 'Equitable, Not Equal: Building a Household Budget Splitter'
 description: 'Most bill-splitting tools assume everyone pays the same share. I built Household Budget for the households where that assumption breaks — splits proportional to income, per-paycheck contributions, and the three-paycheck month handled correctly.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Oct 18 2024'
 heroImage: '/project/household-budget.svg'
 tags: ['vue', 'javascript', 'personal-finance', 'side-projects']
 ---

@@ -1,7 +1,7 @@
 ---
 title: 'Bubble Pop: A Tiny Game Built for My Daughter'
 description: 'How I turned a simple request from my daughter into a zero-dependency vanilla JavaScript bubble-popping game — and what its clean architecture taught me about building small things well.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Aug 14 2026'
 heroImage: '/project/bubble-pop-hero.svg'
 tags: ['javascript', 'games', 'family', 'side-projects', 'accessibility']
 ---

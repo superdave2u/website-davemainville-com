@@ -1,7 +1,7 @@
 ---
 title: 'Managing Attention with Progress: Two Fills, One Bar'
 description: 'A p5.js experiment comparing linear and eased progress bar fills — same duration, different perceived progress — and how I rebuilt it into a platform for running fill options, fill rates, and side-by-side bars from a single button.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Jan 29 2026'
 heroImage: '/project/progress-bar-experiment.svg'
 tags: ['javascript', 'p5js', 'ux', 'side-projects']
 ---

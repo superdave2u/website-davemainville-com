@@ -1,7 +1,7 @@
 ---
 title: 'Growing the Goal: A Visual Timer Built from the Progress Experiment'
 description: 'I turned my progress-bar fill experiment into a real product: a themed visual timer that gives my daughter a cue of how much time is left — and grows its goal to motivate continuous activity right up to the finish.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Mar 22 2026'
 heroImage: '/project/visual-timer.svg'
 tags: ['react', 'typescript', 'ux', 'family', 'side-projects']
 ---

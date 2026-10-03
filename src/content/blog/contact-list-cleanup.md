@@ -1,7 +1,7 @@
 ---
 title: 'Cleaning 15,000 Contacts with a Chain of Responsibility'
 description: 'How a Google Contacts import broke my messaging apps, the criteria I used to tell friends from database records, and the design patterns — Chain of Responsibility and a rate-limiting Decorator — that made the cleanup safe and steady.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Aug 11 2023'
 heroImage: '/project/contact-list-cleanup.svg'
 tags: ['python', 'google-api', 'design-patterns', 'side-projects']
 ---

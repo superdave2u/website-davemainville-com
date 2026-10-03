@@ -1,7 +1,7 @@
 ---
 title: 'Deleting with Confidence: A Crash-Safe Queue for Moving Tasks Out of Todoist'
 description: 'My Todoist list was full of tasks that would never be done — they were references. This tool moves @reference-labeled tasks into Workflowy through a SQLite-backed queue with leases, rate limiting, and one absolute rule: nothing is deleted until the mirror is confirmed.'
-pubDate: 'Oct 03 2026'
+pubDate: 'Aug 13 2026'
 heroImage: '/project/todoist-workflowy-transfer.svg'
 tags: ['python', 'sqlite', 'automation', 'side-projects']
 ---

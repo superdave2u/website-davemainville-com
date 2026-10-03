@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="Messy video files of varied sizes funneling through FFmpeg into a uniform stack of standardized files, with a live processing progress bar">
+  <defs>
+    <linearGradient id="vbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f7f5"/>
+      <stop offset="1" stop-color="#e4efe8"/>
+    </linearGradient>
+    <linearGradient id="vstd" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#1a7f37"/>
+      <stop offset="1" stop-color="#2ea043"/>
+    </linearGradient>
+    <linearGradient id="vbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2ea043"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#vbg)"/>
+
+  <g font-family="Roboto, Arial, sans-serif">
+    <text x="60" y="70" font-size="17" font-weight="600" fill="#4b5563">Ripped, downloaded, inherited — every file different</text>
+    <g transform="rotate(-3 60 110)">
+      <rect x="60" y="90" width="200" height="90" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <rect x="70" y="100" width="70" height="46" rx="4" fill="#64748b"/>
+      <text x="70" y="166" font-size="14" font-weight="700" fill="#b91c1c">1080p · 60fps · 256k</text>
+    </g>
+    <g transform="rotate(2 120 210)">
+      <rect x="120" y="196" width="150" height="72" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <rect x="130" y="206" width="52" height="34" rx="4" fill="#94a3b8"/>
+      <text x="130" y="252" font-size="13" font-weight="700" fill="#b45309">720p · 30fps</text>
+    </g>
+    <g transform="rotate(-2 60 300)">
+      <rect x="60" y="286" width="230" height="80" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+      <rect x="70" y="296" width="80" height="40" rx="4" fill="#475569"/>
+      <text x="70" y="350" font-size="14" font-weight="700" fill="#b91c1c">1080p · 24fps · 192k</text>
+    </g>
+  </g>
+
+  <g transform="translate(400 120)">
+    <path d="M 0 0 L 220 0 L 150 90 L 150 150 L 70 150 L 70 90 Z" fill="#ffffff" stroke="#1a7f37" stroke-width="3"/>
+    <path d="M 35 22 L 185 22 L 130 82 L 130 128 L 90 128 L 90 82 Z" fill="#dcfce7"/>
+    <text x="110" y="60" text-anchor="middle" font-size="30" font-weight="700" fill="#1a7f37">FF</text>
+  </g>
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <text x="510" y="310" font-size="15" font-weight="600" fill="#166534">480p cap · 24 fps cap · 96k audio cap · optional CRF 30</text>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif">
+    <text x="660" y="70" font-size="17" font-weight="600" fill="#4b5563">One standard, ready to stream</text>
+    <rect x="660" y="90" width="200" height="90" rx="8" fill="#ffffff" stroke="url(#vstd)" stroke-width="3"/>
+    <rect x="670" y="100" width="70" height="46" rx="4" fill="url(#vstd)"/>
+    <text x="670" y="166" font-size="14" font-weight="700" fill="#166534">480p · 24fps · 96k</text>
+    <rect x="700" y="196" width="200" height="90" rx="8" fill="#ffffff" stroke="url(#vstd)" stroke-width="3"/>
+    <rect x="710" y="206" width="70" height="46" rx="4" fill="url(#vstd)"/>
+    <text x="710" y="272" font-size="14" font-weight="700" fill="#166534">480p · 24fps · 96k</text>
+    <rect x="740" y="302" width="200" height="90" rx="8" fill="#ffffff" stroke="url(#vstd)" stroke-width="3"/>
+    <rect x="750" y="312" width="70" height="46" rx="4" fill="url(#vstd)"/>
+    <text x="750" y="378" font-size="14" font-weight="700" fill="#166534">480p · 24fps · 96k</text>
+  </g>
+
+  <g font-family="Roboto Mono, monospace">
+    <text x="60" y="440" font-size="16" font-weight="600" fill="#374151">Processing: 43.7% - Elapsed time: 00:03:12</text>
+    <rect x="60" y="456" width="900" height="24" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="2"/>
+    <rect x="60" y="456" width="393" height="24" rx="8" fill="url(#vbar)"/>
+  </g>
+</svg>

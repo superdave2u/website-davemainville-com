@@ -42,6 +42,7 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | coming-home | coming-home | Aug 20 2026 |
 | good-judgments-workshop | good-judgments-workshop | Sep 03 2026 |
 | google-photos-audit | google-photos-audit | Sep 03 2026 (repo flipped public at publish) |
+| rpg-training-platform | rpg-training-platform | Sep 03 2026 |
 
 ## Environment quirks (learned the hard way)
 

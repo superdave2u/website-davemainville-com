@@ -19,7 +19,8 @@ When Dave says "publish this experiment" (gives a GitHub repo URL):
    - Note: no live demo (CLI/Python tools) → link repo only.
 4. **Cross-link:** `relatedPosts` renders automatically on project pages; tags render as pills and generate `/blog/tag/<tag>/` pages automatically (no manual page creation).
 5. **Verify before pushing:** `bun run build`, then grep `dist/` for the new `<title>`s, tag pages, and cross-link hrefs. For p5/web experiments, verify in a real browser via headless Chrome CDP (see quirks below).
-6. **Commit style:** repo follows short `feat:`/`chore:`/`fix:` messages. Fetch before push; transient DNS failures happen — retry the push.
+6. **`git status --short` must be EMPTY of untracked files before pushing.** The `Deploy Vite.js site to Pages` workflow builds the site on every push to main; committing content without its `public/project/<slug>.svg` hero asset (or any artifact split across commits) fails CI publicly. A push is only done when the build can go green.
+7. **Commit style:** repo follows short `feat:`/`chore:`/`fix:` messages. Fetch before push; transient DNS failures happen — retry the push.
 
 ## Tag inventory (auto-generated pages — reuse these before inventing new ones)
 

@@ -44,6 +44,7 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | good-judgments-workshop | good-judgments-workshop | Sep 03 2026 |
 | google-photos-audit | google-photos-audit | Sep 03 2026 (repo flipped public at publish) |
 | rpg-training-platform | rpg-training-platform | Sep 03 2026 |
+| waveshare-todoist-panel | waveshare-todoist-panel | Sep 14 2026 (in development; SSID in ERROR.md left as-is per Dave) |
 
 ## Environment quirks (learned the hard way)
 

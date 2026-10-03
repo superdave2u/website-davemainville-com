@@ -1,20 +1,82 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
 import BlogPost from "../../layouts/BlogPost.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
 
 export async function getStaticPaths() {
-  const posts = await getCollection("project");
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: post,
+  const projects = await getCollection("project");
+  const blogPosts = await getCollection("blog");
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project, blogPosts },
   }));
 }
-type Props = CollectionEntry<"project">;
+type Props = {
+  project: CollectionEntry<"project">;
+  blogPosts: CollectionEntry<"blog">[];
+};
 
-const post = Astro.props;
-const { Content } = await post.render();
+const { project, blogPosts } = Astro.props;
+const { Content } = await project.render();
+const related = (project.data.relatedPosts ?? [])
+  .map((ref) => blogPosts.find((post) => post.slug === (typeof ref === 'string' ? ref : ref.slug)))
+  .filter((post) => post !== undefined);
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...project.data}>
   <Content />
+  {
+    related.length > 0 && (
+      <section class="related">
+        <h2>Related posts</h2>
+        <ul>
+          {related.map((post) => (
+            <li>
+              <a href={`/blog/${post.slug}/`}>
+                <h4>{post.data.title}</h4>
+                <p class="date">
+                  <FormattedDate date={post.data.pubDate} />
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
 </BlogPost>
+
+<style>
+  .related {
+    margin-top: 2em;
+    padding-top: 1.5em;
+    border-top: 1px solid rgb(var(--gray-light));
+  }
+  .related h2 {
+    font-size: 1.2em;
+    color: rgb(var(--gray));
+  }
+  .related ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .related a {
+    text-decoration: none;
+    transition: 0.2s ease;
+  }
+  .related a:hover h4 {
+    color: var(--accent);
+  }
+  .related h4 {
+    margin: 0;
+    color: rgb(var(--black));
+  }
+  .related .date {
+    margin: 0;
+    color: rgb(var(--gray));
+  }
+</style>

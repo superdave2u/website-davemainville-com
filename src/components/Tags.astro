@@ -1,0 +1,49 @@
+---
+interface Props {
+	tags: string[];
+	center?: boolean;
+}
+
+const { tags, center = false } = Astro.props;
+---
+
+{
+	tags && tags.length > 0 && (
+		<ul class="tags" class:list={{ center }}>
+			{tags.map((tag) => (
+				<li>
+					<a href={`/blog/tag/${tag}/`}>#{tag}</a>
+				</li>
+			))}
+		</ul>
+	)
+}
+
+<style>
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.tags.center {
+		justify-content: center;
+	}
+	.tags a {
+		display: inline-block;
+		padding: 0.15em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 999px;
+		background: rgb(var(--gray-light));
+		color: rgb(var(--gray-dark));
+		font-size: 0.875em;
+		text-decoration: none;
+		transition: 0.2s ease;
+	}
+	.tags a:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+</style>

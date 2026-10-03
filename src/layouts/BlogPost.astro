@@ -6,10 +6,11 @@ import Footer from "../components/Footer.astro";
 
 import { Image } from "astro:assets";
 import FormattedDate from "../components/FormattedDate.astro";
+import Tags from "../components/Tags.astro";
 
 type Props = CollectionEntry<"blog">["data"];
 
-const { title, description, updatedDate, heroImage } = Astro.props;
+const { title, description, updatedDate, heroImage, tags, pubDate } = Astro.props;
 ---
 
 <html lang="en">
@@ -49,6 +50,11 @@ const { title, description, updatedDate, heroImage } = Astro.props;
       .date {
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 0.75em;
       }
       .last-updated-on {
         font-style: italic;
@@ -70,6 +76,14 @@ const { title, description, updatedDate, heroImage } = Astro.props;
         <div class="prose">
           <div class="title">
             <h1>{title}</h1>
+            {
+              (pubDate || (tags && tags.length > 0)) && (
+                <div class="date">
+                  {pubDate && <FormattedDate date={pubDate} />}
+                  <Tags tags={tags} center />
+                </div>
+              )
+            }
             <hr />
           </div>
           <slot />

@@ -1,0 +1,119 @@
+---
+import { type CollectionEntry, getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Header from '../../../components/Header.astro';
+import Footer from '../../../components/Footer.astro';
+import FormattedDate from '../../../components/FormattedDate.astro';
+import { SITE_TITLE } from '../../../consts';
+
+export async function getStaticPaths() {
+	const posts = await getCollection('blog');
+	const tags = [...new Set(posts.flatMap((post) => post.data.tags))];
+	return tags.map((tag) => ({
+		params: { tag },
+		props: {
+			tag,
+			posts: posts
+				.filter((post) => post.data.tags.includes(tag))
+				.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()),
+		},
+	}));
+}
+
+type Props = {
+	tag: string;
+	posts: CollectionEntry<'blog'>[];
+};
+
+const { tag, posts } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`#${tag} — ${SITE_TITLE}`} description={`Posts tagged #${tag}`} />
+		<style>
+			main {
+				width: 960px;
+			}
+			h1 {
+				margin-bottom: 2rem;
+			}
+			h1 span {
+				color: var(--accent);
+			}
+			ul {
+				display: flex;
+				flex-direction: column;
+				gap: 2rem;
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+			}
+			ul li * {
+				text-decoration: none;
+				transition: 0.2s ease;
+			}
+			ul li img {
+				border-radius: 12px;
+			}
+			.title {
+				margin: 0;
+				color: rgb(var(--black));
+				line-height: 1.2;
+			}
+			.date {
+				margin: 0;
+				color: rgb(var(--gray));
+			}
+			ul li a {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+			}
+			ul li a:hover h4,
+			ul li a:hover .date {
+				color: var(--accent);
+			}
+			ul a:hover img {
+				box-shadow: var(--box-shadow);
+			}
+			@media (max-width: 720px) {
+				ul li a {
+					flex-direction: column;
+					text-align: center;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Posts tagged <span>#{tag}</span></h1>
+			{
+				posts.length > 0 ? (
+					<ul>
+						{posts.map((post) => (
+							<li>
+								<a href={`/blog/${post.slug}/`}>
+									{post.data.heroImage && (
+										<img width={180} height={90} src={post.data.heroImage} alt="" />
+									)}
+									<div>
+										<h4 class="title">{post.data.title}</h4>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+									</div>
+								</a>
+							</li>
+						))}
+					</ul>
+				) : (
+					<p>No content (yet!)</p>
+				)
+			}
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -49,6 +49,7 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | dvd-backup-pipeline | dvd-backup-pipeline | Sep 23 2026 (repo flipped public at publish; uses downscale-videos) |
 | fire-and-strike | fire-and-strike | Sep 24 2026 |
 | proof | proof | Sep 25 2026 |
+| language-model-research | 211lab/language-model-research | Sep 26 2026 (org repo, 211-lab; live dashboard) |
 
 ## Environment quirks (learned the hard way)
 

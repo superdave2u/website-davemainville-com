@@ -50,6 +50,8 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | fire-and-strike | fire-and-strike | Sep 24 2026 |
 | proof | proof | Sep 25 2026 |
 | language-model-research | 211lab/language-model-research | Sep 26 2026 (org repo, 211-lab; live dashboard) |
+| atlas | 211lab/atlas | Oct 04 2026 (homelab cluster; homage naming: Titan, Turing, Hopper, Lovelace, Babbage, Memex, Minsky) |
+| website-marketing-calculator | redrhino-online/website-marketing-calculator | Jun 01 2023 (org repo, red rhino consulting practice) |
 
 ## Environment quirks (learned the hard way)
 

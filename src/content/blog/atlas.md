@@ -8,6 +8,19 @@ tags: ['home-lab', 'kubernetes', 'gitops']
 
 Every experiment on this blog eventually needs somewhere to run. [Atlas](https://github.com/211lab/atlas) is that somewhere — my homelab hobby cluster, the substrate the 211 Lab builds on: a **four-host Proxmox VE cluster carrying a highly available K3s control plane**, operated with the same GitOps discipline I'd demand in an enterprise environment.
 
+## Named in homage
+
+I've been fortunate enough to be around computers for nearly 30 years now, starting as a young child, and between my gaming computer and this cluster I've always felt myself connected to computer science. So every device I keep is named in homage to somebody notable from its history — the naming is written into the [211 Lab organization profile](https://github.com/211lab) like a little family tree:
+
+- **Atlas** — the cluster itself. Not a person, but the 1960s British supercomputer from the University of Manchester, Ferranti, and Plessey — among the first machines with virtual memory and real multitasking support, and deeply influential in early OS design. A name for the machine everything else runs *on*.
+- **Titan** — my gaming workstation, named for the Oak Ridge National Laboratory Cray supercomputer (2012–2019) that was among the first to pair CPUs and GPUs at scale. It earned its name twice over: it's the machine whose GPU (the RTX 3090) powers my local-model research.
+- **Turing** (10.0.0.101, control plane 1) — Alan Turing, the father of theoretical computer science: the Turing machine, the concept of the algorithm, the Enigma break.
+- **Hopper** (10.0.0.102, control plane 2) — Grace Hopper, the compiler pioneer: high-level programming, COBOL, and the popularized art of "debugging."
+- **Lovelace** (10.0.0.103, control plane 3) — Ada Lovelace, who wrote the first algorithm intended to be executed by a machine — and saw that machines could go beyond arithmetic.
+- **Babbage** (10.0.0.104, the worker) — Charles Babbage, who designed the Difference Engine and proposed the Analytical Engine.
+
+There's an unintentional joke in the topology I only noticed after the fact: the **three hosts carrying the control plane — the nodes that deliberate and keep state — are the theorists and programmers** (Turing, Hopper, Lovelace), while **Babbage, the man who actually built machines, carries the worker doing the physical execution**. The homelab reenacted the Analytical Engine's division of labor without anyone planning it.
+
 ## The shape of the cluster
 
 Four physical Proxmox hosts carry the K3s VMs: **three embedded-etcd control-plane nodes and one worker**, fronted by a **kube-vip** virtual IP so the Kubernetes API has a stable address. Storage comes from a dedicated **TrueNAS NFS dataset** wired through the NFS CSI driver as a StorageClass. Networking is handled by a **dedicated Pi-hole**, provisioned by Ansible, that automatically registers every cluster Ingress as a DNS entry (ExternalDNS) — so `git.atlas.lan`, `registry.atlas.lan`, and `argocd.atlas.lan` simply exist once things deploy. Observability covers both layers: kube-prometheus-stack (Prometheus + Grafana) watches the K3s VMs *and* scrapes node exporters running on all four Proxmox hosts themselves.

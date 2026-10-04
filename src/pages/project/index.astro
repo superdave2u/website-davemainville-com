@@ -13,12 +13,15 @@ const posts = await (async () => {
     getCollection("blog"),
   ]);
   const pubDateBySlug = new Map(blogPosts.map((post) => [post.slug, post.data.pubDate.valueOf()]));
-  // Order the grid to match the blog page: a project with exactly one related
-  // post follows that post's pubDate; everything else keeps collection order.
+  // Order the grid to match the blog page: every project whose related posts
+  // include its own post (same slug) sorts by that post's pubDate; projects
+  // without a post of their own keep collection order at the end.
   const withKeys = projects.map((project, index) => {
-    const related = project.data.relatedPosts ?? [];
-    const sortDate = related.length === 1 ? pubDateBySlug.get(related[0].slug) : undefined;
-    return { project, sortDate, index };
+    const related = (project.data.relatedPosts ?? []).map((ref) =>
+      typeof ref === "string" ? ref : ref.slug,
+    );
+    const ownPostDate = related.includes(project.slug) ? pubDateBySlug.get(project.slug) : undefined;
+    return { project, sortDate: ownPostDate, index };
   });
   return withKeys
     .sort((a, b) => {

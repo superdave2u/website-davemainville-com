@@ -6,7 +6,7 @@ heroImage: '/project/fire-and-strike.svg'
 tags: ['react', 'typescript', 'personal-finance', 'side-projects']
 ---
 
-[Fire Target Tracker](/blog/fire-target-tracker/) specified a FIRE dashboard that answers "how much must I save next month?" [Fire & Strike](https://superdave2u.github.io/fire-and-strike/) is the implementation that went further — from deterministic arithmetic into **simulation**, and from reporting the present into *solving for a decision* ([source on GitHub](https://github.com/superdave2u/fire-and-strike)).
+I'd specified a FIRE dashboard ([its spec lives here](https://github.com/superdave2u/fire-target-tracker)) that answers "how much must I save next month?" [Fire & Strike](https://superdave2u.github.io/fire-and-strike/) is the implementation that went further — from deterministic arithmetic into **simulation**, and from reporting the present into *solving for a decision* ([source on GitHub](https://github.com/superdave2u/fire-and-strike)).
 
 ## The two use cases
 

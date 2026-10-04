@@ -52,7 +52,7 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | language-model-research | 211lab/language-model-research | Sep 26 2026 (org repo, 211-lab; live dashboard) |
 | atlas | 211lab/atlas | Oct 04 2026 (homelab cluster; homage naming: Titan, Turing, Hopper, Lovelace, Babbage, Memex, Minsky) |
 | website-marketing-calculator | redrhino-online/website-marketing-calculator | Jun 01 2023 (org repo, red rhino consulting practice) |
-| red-ideation-session | redrhino-online/red-ideation-session | Mar 01 2024 (org repo, red rhino consulting practice; RED Method origin deck, repo transformed at publish with preserved commit date) |
+| red-ideation-session | redrhino-online/red-ideation-session | UNPUBLISHED (repo transformed: live Reveal.js deck + preserved 2024-03-01 dates; blog/project artifacts pulled back to the drawing board — do not assume content exists) |
 
 ## Environment quirks (learned the hard way)
 

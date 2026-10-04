@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="A marketing funnel with a red rhino: ad budget flowing in the top as leads, narrowing through booked calls and completed calls to enrolled clients, with ROAS and profit metrics below">
+  <defs>
+    <linearGradient id="mbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fdf4f4"/>
+      <stop offset="1" stop-color="#f7e4e4"/>
+    </linearGradient>
+    <linearGradient id="mfund" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d64545"/>
+      <stop offset="0.55" stop-color="#b93232"/>
+      <stop offset="1" stop-color="#8f2020"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#mbg)"/>
+
+  <g transform="translate(120 120)">
+    <path d="M 0 0 C 24 -30, 62 -36, 84 -18 C 96 -8, 98 6, 92 18 L 112 22 L 90 34 C 84 52, 62 60, 44 52 L 30 64 L 32 44 C 8 40, -8 22, 0 0 Z" fill="#c23b3b"/>
+    <circle cx="70" cy="8" r="4.5" fill="#fdf4f4"/>
+    <path d="M 88 -12 L 118 -22 L 96 -4 Z" fill="#e8a0a0"/>
+  </g>
+  <text x="120" y="222" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="16" font-weight="700" fill="#8f2020">RED RHINO</text>
+  <text x="120" y="244" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="13" fill="#b25c5c">funnels that charge downhill</text>
+
+  <g>
+    <path d="M 280 90 h 480 l -40 92 h -400 Z" fill="url(#mfund)" fill-opacity="0.95"/>
+    <path d="M 320 194 h 400 l -40 92 h -320 Z" fill="url(#mfund)" fill-opacity="0.8"/>
+    <path d="M 360 298 h 320 l -40 92 h -240 Z" fill="url(#mfund)" fill-opacity="0.65"/>
+
+    <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+      <text x="520" y="146" font-size="17" font-weight="700" fill="#ffffff">LEADS — ad budget ÷ CPL</text>
+      <text x="520" y="250" font-size="16" font-weight="700" fill="#ffffff">BOOKED + COMPLETED CALLS</text>
+      <text x="520" y="354" font-size="16" font-weight="700" fill="#ffffff">ENROLLED CLIENTS × price</text>
+    </g>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" font-size="13" font-weight="600" fill="#8f2020">
+    <g transform="translate(820 120)">
+      <rect width="150" height="66" rx="10" fill="#ffffff" stroke="#d64545" stroke-width="2"/>
+      <text x="14" y="26">ROAS</text>
+      <text x="14" y="50" font-family="Roboto Mono, monospace" font-size="15" font-weight="700" fill="#c23b3b">4.20×</text>
+    </g>
+    <g transform="translate(820 200)">
+      <rect width="150" height="66" rx="10" fill="#ffffff" stroke="#d64545" stroke-width="2"/>
+      <text x="14" y="26">GROSS PROFIT</text>
+      <text x="14" y="50" font-family="Roboto Mono, monospace" font-size="15" font-weight="700" fill="#c23b3b">$52,600</text>
+    </g>
+    <g transform="translate(820 280)">
+      <rect width="150" height="66" rx="10" fill="#ffffff" stroke="#d64545" stroke-width="2"/>
+      <text x="14" y="26">COST PER CLIENT</text>
+      <text x="14" y="50" font-family="Roboto Mono, monospace" font-size="15" font-weight="700" fill="#c23b3b">$180</text>
+    </g>
+    <g transform="translate(820 360)">
+      <rect width="150" height="66" rx="10" fill="#ffffff" stroke="#d64545" stroke-width="2"/>
+      <text x="14" y="26">MARGIN</text>
+      <text x="14" y="50" font-family="Roboto Mono, monospace" font-size="15" font-weight="700" fill="#c23b3b">78%</text>
+    </g>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="140" y="446" width="740" height="42" rx="21" fill="#ffffff" stroke="#d64545" stroke-width="2"/>
+    <text x="510" y="472" font-size="15" font-weight="600" fill="#8f2020">two directions: start from budget → project profit · start from income goal → back into required leads</text>
+  </g>
+</svg>

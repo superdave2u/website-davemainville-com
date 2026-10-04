@@ -2,7 +2,7 @@
 title: 'Fire & Strike'
 description: 'A FIRE retirement calculator with seeded Monte Carlo projections (p10/p50/p90) and a STRIKE solver for the extra yearly contribution needed to retire by a target age — test-first, onion-architected, built by an agent loop.'
 heroImage: '../../../public/project/fire-and-strike.svg'
-relatedPosts: ['fire-and-strike', 'proof']
+relatedPosts: ['fire-and-strike']
 ---
 
 **Fire & Strike** is a retirement calculator for the FIRE community with two use cases: project your current pace as a Monte Carlo fan chart (p10/p50/p90 portfolio paths vs age, each stamped with its FIRE-crossing age), and solve a **STRIKE plan** — the extra yearly contribution so the median path reaches your target retirement age.

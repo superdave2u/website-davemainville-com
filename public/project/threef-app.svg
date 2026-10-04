@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="A forge scene representing the Crucible: a furnace with flame, an anvil holding a struck blade, and a weekly calibration readout — feed the fire, release the slag, strike where it matters">
+  <defs>
+    <linearGradient id="fbg2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#16110d"/>
+      <stop offset="1" stop-color="#241a12"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb347"/>
+      <stop offset="0.6" stop-color="#e8722a"/>
+      <stop offset="1" stop-color="#c23b1e"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#c9d4e2"/>
+      <stop offset="1" stop-color="#8a97a8"/>
+    </linearGradient>
+    <linearGradient id="ember" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#4ade80"/>
+      <stop offset="0.55" stop-color="#facc15"/>
+      <stop offset="1" stop-color="#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#fbg2)"/>
+
+  <g>
+    <rect x="90" y="200" width="260" height="180" rx="14" fill="#0d0a07" stroke="#3a2c1e" stroke-width="3"/>
+    <path d="M 130 380 C 130 320, 150 300, 170 262 C 180 240, 172 218, 158 196 C 186 210, 198 232, 196 254 C 214 236, 220 214, 212 186 C 240 214, 248 250, 238 278 C 260 262, 268 238, 262 210 C 292 246, 300 296, 288 330 C 278 358, 258 376, 230 380 Z" fill="url(#flame)"/>
+    <path d="M 180 380 C 178 344, 192 326, 202 306 C 210 290, 206 272, 196 258 C 216 272, 224 292, 220 310 C 234 298, 240 280, 236 258 C 252 284, 254 316, 244 340 C 238 358, 226 372, 210 380 Z" fill="#ffdd87" fill-opacity="0.85"/>
+    <rect x="110" y="380" width="220" height="24" rx="6" fill="#33261a"/>
+    <g fill="#e8722a">
+      <circle cx="150" cy="428" r="4"/>
+      <circle cx="196" cy="436" r="3"/>
+      <circle cx="248" cy="424" r="4.5"/>
+      <circle cx="290" cy="434" r="3"/>
+    </g>
+    <text x="220" y="470" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#c9a06a">FURNACE READ — momentum, clogged to clean-burning</text>
+  </g>
+
+  <g transform="translate(500 230)">
+    <rect x="-40" y="120" width="380" height="22" rx="4" fill="#3a2c1e"/>
+    <path d="M -20 120 L -8 84 L 232 84 L 244 120 Z" fill="#4a3826"/>
+    <path d="M -4 84 L 60 84 L 60 60 L 148 60 L 148 84 L 216 84 L 208 120 L 8 120 Z" fill="url(#steel)"/>
+    <path d="M 60 60 L 148 60 L 148 44 L 60 44 Z" fill="#a8b4c4"/>
+    <path d="M 66 44 C 96 12, 190 12, 220 44 L 220 52 C 190 24, 96 24, 66 52 Z" fill="url(#steel)"/>
+    <g transform="translate(96 -44) rotate(-38)">
+      <rect x="-14" y="-6" width="160" height="16" rx="6" fill="#5d4a2e"/>
+      <rect x="132" y="-22" width="34" height="44" rx="6" fill="#4a3826"/>
+    </g>
+    <text x="150" y="180" text-anchor="middle" font-family="Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#c9a06a">FORGE READ — responsibility, crushed to unbreakable</text>
+  </g>
+
+  <g>
+    <rect x="880" y="96" width="0" height="0" fill="none"/>
+    <g transform="translate(700 96)">
+      <rect width="260" height="150" rx="12" fill="#0d0a07" stroke="#3a2c1e" stroke-width="2.5"/>
+      <text x="20" y="34" font-family="Roboto, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#e8a04c">WEEKLY SCOREBOARD</text>
+      <g font-family="Roboto Mono, monospace" font-size="13">
+        <circle cx="30" cy="60" r="9" fill="#4ade80"/><text x="52" y="65" fill="#d7d0c2">Training — 5 of 5</text>
+        <circle cx="30" cy="90" r="9" fill="#facc15"/><text x="52" y="95" fill="#d7d0c2">Marriage — date night</text>
+        <circle cx="30" cy="120" r="9" fill="#ef4444"/><text x="52" y="125" fill="#d7d0c2">Sabbath — skipped</text>
+      </g>
+      <text x="20" y="142" font-family="Georgia, serif" font-size="12" font-style="italic" fill="#8a7a5e">awareness, not punishment</text>
+    </g>
+    <g transform="translate(700 270)">
+      <rect width="260" height="110" rx="12" fill="#0d0a07" stroke="#3a2c1e" stroke-width="2.5"/>
+      <text x="20" y="32" font-family="Roboto, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="2" fill="#e8a04c">SLAG CHANNEL</text>
+      <g font-family="Roboto Mono, monospace" font-size="12.5" fill="#d7d0c2">
+        <text x="20" y="58">avoided: the hard conversation</text>
+        <text x="20" y="82">carrying: an old commitment</text>
+        <text x="20" y="106" font-style="italic" font-family="Georgia, serif" fill="#8a7a5e">exposure first — fixing comes later</text>
+      </g>
+    </g>
+  </g>
+
+  <g font-family="Roboto, Arial, sans-serif" text-anchor="middle">
+    <rect x="60" y="440" width="900" height="46" rx="23" fill="#1a1207" stroke="#c9a06a" stroke-width="2"/>
+    <text x="510" y="469" font-size="16" font-weight="600" fill="#f0dfb8">Feed the fire · release the slag · strike where it matters — 12 weeks, one read at a time</text>
+  </g>
+</svg>

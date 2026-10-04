@@ -18,7 +18,7 @@
       <g transform="translate(60 100)">
         <rect width="200" height="150" rx="12" fill="#ffffff" stroke="#4f6bff" stroke-width="2.5"/>
         <rect x="0" y="0" width="200" height="30" rx="12" fill="#1a2440"/>
-        <text x="100" y="20" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c9d4f2">PVE ×4 — the four hosts</text>
+        <text x="100" y="20" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c9d4f2">PVE ×6 — the homelab hosts</text>
         <g fill="url(#ak3s)">
           <rect x="16" y="44" width="52" height="30" rx="5"/>
           <rect x="74" y="44" width="52" height="30" rx="5"/>
@@ -27,8 +27,15 @@
         <text x="42" y="64" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Turing</text>
         <text x="100" y="64" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Hopper</text>
         <text x="158" y="64" text-anchor="middle" font-size="9.5" font-weight="700" fill="#ffffff">Lovelace</text>
-        <rect x="16" y="84" width="168" height="26" rx="5" fill="#4fc3dd"/>
-        <text x="100" y="101" text-anchor="middle" font-size="10.5" font-weight="700" fill="#0d2b34">Babbage — worker</text>
+        <rect x="16" y="84" width="52" height="26" rx="5" fill="#4fc3dd"/>
+        <text x="42" y="101" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0d2b34">Babbage</text>
+        <text x="42" y="116" text-anchor="middle" font-size="8" fill="#3b4a8c">worker</text>
+        <rect x="74" y="84" width="52" height="26" rx="5" fill="#e8a04c"/>
+        <text x="100" y="101" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4a2e08">Memex</text>
+        <text x="100" y="116" text-anchor="middle" font-size="8" fill="#8a6d3b">storage</text>
+        <rect x="132" y="84" width="52" height="26" rx="5" fill="#8250df"/>
+        <text x="158" y="101" text-anchor="middle" font-size="9.5" font-weight="700" fill="#f1e8ff">Minsky</text>
+        <text x="158" y="116" text-anchor="middle" font-size="8" fill="#b59ad6">steward host</text>
         <rect x="16" y="118" width="168" height="22" rx="5" fill="#eef1f8" stroke="#c3cbe8" stroke-width="1"/>
         <text x="100" y="133" text-anchor="middle" font-size="10" fill="#3b4a8c">kube-vip API · cert-manager</text>
       </g>

@@ -21,6 +21,11 @@ I've been fortunate enough to be around computers for nearly 30 years now, start
 
 There's an unintentional joke in the topology I only noticed after the fact: the **three hosts carrying the control plane — the nodes that deliberate and keep state — are the theorists and programmers** (Turing, Hopper, Lovelace), while **Babbage, the man who actually built machines, carries the worker doing the physical execution**. The homelab reenacted the Analytical Engine's division of labor without anyone planning it.
 
+Two more names sit beside the four K3s hosts in the compute view, doing different kinds of work:
+
+- **Memex** (10.0.0.105) — named for Vannevar Bush's visionary 1945 "memory extender," the hypothetical device where a person stores all their books and records, navigable by association — the ancestor of hypertext. The homage fits exactly: Memex is the lab's **storage backend**, the persistence layer the cluster writes everything to. It runs standalone by design — deliberately removed from the Proxmox cluster so a critical storage host never waits on quorum to bring its services up.
+- **Minsky** (10.0.0.106) — named for Marvin Minsky, the AI pioneer and MIT professor whose work on neural nets, symbolic reasoning, and multi-agent societies of mind planted the field I get to work in decades later. Fittingly for the name, Minsky is the **physical host of the agentic steward** — an autonomous agent that supports my home network in various ways, with its own project planned for a future post.
+
 ## The shape of the cluster
 
 Four physical Proxmox hosts carry the K3s VMs: **three embedded-etcd control-plane nodes and one worker**, fronted by a **kube-vip** virtual IP so the Kubernetes API has a stable address. Storage comes from a dedicated **TrueNAS NFS dataset** wired through the NFS CSI driver as a StorageClass. Networking is handled by a **dedicated Pi-hole**, provisioned by Ansible, that automatically registers every cluster Ingress as a DNS entry (ExternalDNS) — so `git.atlas.lan`, `registry.atlas.lan`, and `argocd.atlas.lan` simply exist once things deploy. Observability covers both layers: kube-prometheus-stack (Prometheus + Grafana) watches the K3s VMs *and* scrapes node exporters running on all four Proxmox hosts themselves.

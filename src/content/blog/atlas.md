@@ -2,6 +2,7 @@
 title: 'Atlas: The Homelab Cluster Where Everything Else Gets Deployed'
 description: 'My hobby cluster: four Proxmox hosts carrying a HA K3s control plane, with self-hosted Gitea, Actions, and Argo CD running the same GitOps discipline I expect at work — sealed secrets, gitleaks on every commit, and C4 docs that keep it honest.'
 pubDate: 'Oct 04 2026'
+updatedDate: 'Oct 10 2026'
 heroImage: '/project/atlas.svg'
 tags: ['home-lab', 'kubernetes', 'gitops']
 ---
@@ -28,7 +29,7 @@ Two more names sit beside the four K3s hosts in the compute view, doing differen
 
 ## The shape of the cluster
 
-Four physical Proxmox hosts carry the K3s VMs: **three embedded-etcd control-plane nodes and one worker**, fronted by a virtual IP so the Kubernetes API has a stable address. Storage comes from a dedicated **TrueNAS NFS dataset** wired through the NFS CSI driver as a StorageClass. Networking is handled by a **dedicated Pi-hole**, provisioned by Ansible, that automatically registers every cluster Ingress as a DNS entry (ExternalDNS) — so the forge, registry, and Argo CD each get a name on the lab network the moment they deploy. Observability covers both layers: kube-prometheus-stack (Prometheus + Grafana) watches the K3s VMs *and* scrapes node exporters running on all four Proxmox hosts themselves.
+Four physical Proxmox hosts carry the K3s VMs: **three embedded-etcd control-plane nodes and one worker**, fronted by a virtual IP so the Kubernetes API has a stable address. Storage comes from a dedicated **TrueNAS NFS dataset** wired through the NFS CSI driver as a StorageClass. Networking is designed around a **dedicated Pi-hole**, provisioned by Ansible, that registers every cluster Ingress as a DNS entry (ExternalDNS) — the ExternalDNS side runs on the cluster today; the Pi-hole host is the last piece still being stood up, and the repo's open-work list says so plainly. Observability covers both layers: kube-prometheus-stack (Prometheus + Grafana) watches the K3s VMs *and* scrapes node exporters running on all four Proxmox hosts themselves.
 
 The provisioning path is Ansible end to end — a bootstrap playbook for the control user, cloud-init Ubuntu VMs, package-maintenance playbooks, and DNS sync. The repo keeps a three-layer access model explicit (Proxmox root / guest OS / Kubernetes admin) with the rule that a credential for one layer never substitutes for the next.
 
@@ -37,6 +38,34 @@ The provisioning path is Ansible end to end — a bootstrap playbook for the con
 The fun part: the cluster hosts its **own delivery system**. A self-hosted **Gitea** forge and its built-in container registry run on the cluster, with a Gitea Actions runner building images. **Argo CD** (app-of-apps) reconciles everything from Helm values stored in the repo's `gitops/` tree.
 
 The clever seam is image promotion: Argo CD core has no registry poller, so **the build job itself writes the new image tag back to git** — the commit is the deployment signal, the audit log, and the rollback point in one. Secrets are handled by **SealedSecrets**: encrypted ciphertext lives in the repo under `gitops/sealed/`, decryptable only inside the cluster by the controller's key; the sealing private key is never committed.
+
+## What runs on it
+
+A root Application reconciles everything under `gitops/apps/` — one Argo CD Application per component. As of this update (Oct 10, 2026) that's sixteen of them, and [the `gitops/apps/` tree](https://github.com/211lab/atlas/tree/main/gitops/apps) is the live source of truth; this list is a snapshot of it.
+
+The platform — the machinery that delivers everything else:
+
+- **gitea** — the forge and its built-in container registry
+- **gitea-actions** — the Actions runner building images
+- **gitea-runner-hygiene** — keeps the runner's caches and artifacts from growing forever
+- **argocd** — the app-of-apps controller reconciling the whole tree
+- **sealed-secrets** — the only way a secret enters the repo
+- **cert-manager** — TLS for every Ingress
+- **atlas-config** — cluster-scoped manifests: issuers, StorageClasses, CoreDNS
+- **external-dns** — declares Ingress hostnames as DNS records
+- **cloudnative-pg** — the PostgreSQL operator, the newest platform piece
+
+The apps — the things being delivered:
+
+- **redop** — the RED operations platform
+- **docs** — the repo's MkDocs documentation site, built and promoted by CI
+- **atlas-landing** — the root-domain landing page (graffiti wordmark)
+- **3f-app** — the Crucible companion app: offline-first coaching platform (FastAPI + React PWA)
+- **dave-study** — a character-study dossier, MkDocs Material served by busybox
+- **immich** — the photo library
+- **home-assistant** — home automation
+
+Sixteen applications, every one declared in git and reconciled by Argo CD. When I add the seventeenth, the list updates in one commit — and this post re-syncs the same way.
 
 ## Documentation as an operating habit
 

@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="The canon chat agent architecture: a chat UI hitting an API gateway and a Lambda that carries an onion-architecture core, with a static-first prompt plan crossing a cache boundary into Bedrock, and a context pool fed by retrieval from a private S3 index">
+  <defs>
+    <linearGradient id="cbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f8"/>
+      <stop offset="1" stop-color="#e4eaf0"/>
+    </linearGradient>
+    <linearGradient id="cred" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e05c4f"/>
+      <stop offset="1" stop-color="#c74438"/>
+    </linearGradient>
+    <linearGradient id="cblue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f6bff"/>
+      <stop offset="1" stop-color="#3b55e0"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b4a8c"/>
+    </marker>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#cbg)"/>
+
+  <g font-family="Roboto, Arial, sans-serif">
+    <text x="60" y="84" font-size="15" font-weight="700" letter-spacing="2" fill="#8c3a34">CANON CHAT — RAG AGENT ON AN ONION CORE</text>
+
+    <!-- Chat UI -->
+    <g transform="translate(60 110)">
+      <rect width="200" height="330" rx="12" fill="#ffffff" stroke="#2337ff" stroke-width="2.5"/>
+      <rect x="0" y="0" width="200" height="30" rx="12" fill="#1a2440"/>
+      <text x="100" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#c9d4f2">CHAT UI (S3 + CLOUDFRONT)</text>
+      <rect x="16" y="46" width="168" height="26" rx="6" fill="#eef1f8" stroke="#c3cbe8"/>
+      <text x="24" y="63" font-size="10" fill="#3b4a8c">you: how do I price my offer?</text>
+      <rect x="16" y="82" width="168" height="44" rx="6" fill="#f8f9fc" stroke="#c3cbe8"/>
+      <text x="24" y="99" font-size="10" fill="#3b4a8c">agent: pick one currency [S1]</text>
+      <text x="24" y="114" font-size="9" fill="#6a7288">sources: label · id · locator</text>
+      <rect x="16" y="136" width="168" height="24" rx="6" fill="#eef1f8" stroke="#c3cbe8"/>
+      <text x="24" y="152" font-size="10" fill="#3b4a8c">you: what about step 2?</text>
+      <rect x="16" y="170" width="90" height="26" rx="13" fill="url(#cred)"/>
+      <text x="61" y="187" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">GO DEEPER</text>
+      <text x="16" y="222" font-size="9.5" fill="#4a5160">session lives in the browser:</text>
+      <text x="16" y="236" font-size="9.5" fill="#4a5160">history + pool of chunk ids</text>
+      <rect x="16" y="252" width="168" height="22" rx="5" fill="#fdf0ee" stroke="#e0a49e"/>
+      <text x="24" y="267" font-size="9" font-weight="700" fill="#8c3a34">x-api-key · no streaming</text>
+      <text x="16" y="300" font-size="9.5" fill="#6a7288">stateless server:</text>
+      <text x="16" y="314" font-size="9.5" fill="#6a7288">every request rebuilds the session</text>
+    </g>
+
+    <path d="M 270 275 H 320" stroke="#3b4a8c" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+
+    <!-- API Gateway + Lambda onion -->
+    <g transform="translate(330 110)">
+      <rect width="330" height="330" rx="12" fill="#ffffff" stroke="#2337ff" stroke-width="2.5"/>
+      <rect x="0" y="0" width="330" height="30" rx="12" fill="#1a2440"/>
+      <text x="165" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#c9d4f2">API GATEWAY → LAMBDA (THIN HANDLER)</text>
+
+      <!-- onion rings -->
+      <ellipse cx="165" cy="195" rx="150" ry="118" fill="#eef1f8" stroke="#4f6bff" stroke-width="2"/>
+      <text x="165" y="52" text-anchor="middle" font-size="10" font-weight="700" fill="#3b55e0">INFRASTRUCTURE — ADAPTERS</text>
+      <ellipse cx="165" cy="200" rx="108" ry="84" fill="#ffffff" stroke="#4fc3dd" stroke-width="2"/>
+      <text x="165" y="132" text-anchor="middle" font-size="10" font-weight="700" fill="#2b8fa8">APPLICATION — USE CASES</text>
+      <ellipse cx="165" cy="205" rx="66" ry="52" fill="url(#cred)"/>
+      <text x="165" y="196" text-anchor="middle" font-size="11" font-weight="700" fill="#ffffff">DOMAIN (PURE)</text>
+      <text x="165" y="212" text-anchor="middle" font-size="8.5" fill="#fde3e0">value objects · ports · policies</text>
+      <text x="165" y="226" text-anchor="middle" font-size="8.5" fill="#fde3e0">no I/O · no vendor types</text>
+
+      <!-- policy callouts -->
+      <g font-size="9" fill="#4a5160">
+        <text x="18" y="252">NamingRulePolicy — scrubs every</text>
+        <text x="18" y="264">user-visible string</text>
+        <text x="196" y="252">ContextPoolPolicy — append-only,</text>
+        <text x="196" y="264">deduped, capped at 24</text>
+        <text x="18" y="288">RetrievalTriggerPolicy — thin scores</text>
+        <text x="18" y="300">or an explicit ask → round two</text>
+        <text x="196" y="288">CitationPolicy — markers must</text>
+        <text x="196" y="300">resolve to retrieved sources</text>
+      </g>
+    </g>
+
+    <path d="M 670 200 H 720" stroke="#3b4a8c" stroke-width="2.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+
+    <!-- Right column: prompt plan + providers -->
+    <g transform="translate(730 110)">
+      <rect width="230" height="330" rx="12" fill="#ffffff" stroke="#2337ff" stroke-width="2.5"/>
+      <rect x="0" y="0" width="230" height="30" rx="12" fill="#1a2440"/>
+      <text x="115" y="20" text-anchor="middle" font-size="12" font-weight="700" fill="#c9d4f2">PROMPT PLAN → PROVIDERS</text>
+
+      <g transform="translate(16 44)">
+        <rect width="198" height="30" rx="6" fill="url(#cblue)"/>
+        <text x="10" y="19" font-size="9.5" font-weight="700" fill="#ffffff">1 · SYSTEM — STATIC</text>
+        <rect y="34" width="198" height="30" rx="6" fill="#4fc3dd"/>
+        <text x="10" y="53" font-size="9.5" font-weight="700" fill="#0f3340">2 · CANON POOL — GROWS</text>
+        <rect y="68" width="198" height="30" rx="6" fill="#eef1f8" stroke="#c3cbe8"/>
+        <text x="10" y="87" font-size="9.5" font-weight="700" fill="#3b4a8c">3 · HISTORY — LAST 10</text>
+        <rect y="102" width="198" height="30" rx="6" fill="#eef1f8" stroke="#c3cbe8"/>
+        <text x="10" y="121" font-size="9.5" font-weight="700" fill="#3b4a8c">4 · QUERY — ALWAYS LAST</text>
+      </g>
+
+      <path d="M 115 186 V 206" stroke="#8c3a34" stroke-width="2.5"/>
+      <rect x="16" y="208" width="198" height="26" rx="6" fill="#fdf0ee" stroke="#e05c4f" stroke-width="1.5"/>
+      <text x="115" y="225" text-anchor="middle" font-size="9.5" font-weight="700" fill="#8c3a34">CACHE BOUNDARY — BYTE-STABLE</text>
+
+      <g transform="translate(16 248)">
+        <rect width="94" height="34" rx="6" fill="url(#cblue)"/>
+        <text x="47" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#ffffff">BEDROCK (v1)</text>
+        <text x="47" y="27" text-anchor="middle" font-size="7.5" fill="#d7ddff">cachePoint marker</text>
+        <rect x="104" width="94" height="34" rx="6" fill="#eef1f8" stroke="#4f6bff"/>
+        <text x="151" y="15" text-anchor="middle" font-size="9" font-weight="700" fill="#3b55e0">OLLAMA / OPENROUTER</text>
+        <text x="151" y="27" text-anchor="middle" font-size="7.5" fill="#6a7288">same ports, deferred</text>
+      </g>
+      <text x="16" y="308" font-size="9" fill="#4a5160">provider registry · fail-fast cache config</text>
+    </g>
+
+    <!-- Bottom band: private corpus pipeline -->
+    <g transform="translate(60 460)">
+      <rect width="900" height="34" rx="8" fill="#ffffff" stroke="#4fc3dd" stroke-width="2"/>
+      <text x="20" y="22" font-size="10" font-weight="700" fill="#2b8fa8">PRIVATE CORPUS (150 TRANSCRIPTS + METHOD DOCS)</text>
+      <text x="330" y="22" font-size="9.5" fill="#4a5160">→ chunk → scrub → embed → index (S3, ~25 MB, in-Lambda cosine)</text>
+      <text x="740" y="22" font-size="9.5" font-weight="700" fill="#8c3a34">174 OFFLINE TESTS · mypy strict</text>
+    </g>
+  </g>
+</svg>

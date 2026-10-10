@@ -41,7 +41,7 @@ The clever seam is image promotion: Argo CD core has no registry poller, so **th
 
 ## What runs on it
 
-A root Application reconciles everything under `gitops/apps/` — one Argo CD Application per component. As of this update (Oct 10, 2026) that's sixteen of them, and [the `gitops/apps/` tree](https://github.com/211lab/atlas/tree/main/gitops/apps) is the live source of truth; this list is a snapshot of it.
+A root Application reconciles everything under `gitops/apps/` — one Argo CD Application per component. As of this update (Oct 10, 2026) that's seventeen of them, and [the `gitops/apps/` tree](https://github.com/211lab/atlas/tree/main/gitops/apps) is the live source of truth; this list is a snapshot of it.
 
 The platform — the machinery that delivers everything else:
 
@@ -62,10 +62,11 @@ The apps — the things being delivered:
 - **atlas-landing** — the root-domain landing page (graffiti wordmark)
 - **3f-app** — the Crucible companion app: offline-first coaching platform (FastAPI + React PWA)
 - **dave-study** — a character-study dossier, MkDocs Material served by busybox
+- **photocraft** — PhotoCraft, the clean-room Photoshop reimplementation in pure Rust, web build ([the story](/blog/photocraft/))
 - **immich** — the photo library
 - **home-assistant** — home automation
 
-Sixteen applications, every one declared in git and reconciled by Argo CD. When I add the seventeenth, the list updates in one commit — and this post re-syncs the same way.
+Seventeen applications, every one declared in git and reconciled by Argo CD. When I add the eighteenth, the list updates in one commit — and this post re-syncs the same way.
 
 ## Documentation as an operating habit
 

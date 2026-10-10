@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1020 510" role="img" aria-label="The clean room: Photoshop studied for behaviour only, crossed through a wall of public specs and observation into PhotoCraft, a pure-Rust reimplementation verified against a corpus of real PSDs and shipped by agents to the Atlas cluster">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f6f8"/>
+      <stop offset="1" stop-color="#e4eaf0"/>
+    </linearGradient>
+    <linearGradient id="prust" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b7410e"/>
+      <stop offset="1" stop-color="#8f320a"/>
+    </linearGradient>
+    <linearGradient id="pblue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4f6bff"/>
+      <stop offset="1" stop-color="#3b55e0"/>
+    </linearGradient>
+    <marker id="parrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#2337ff"/>
+    </marker>
+  </defs>
+
+  <rect width="1020" height="510" fill="url(#pbg)"/>
+
+  <g font-family="Roboto, Arial, sans-serif">
+    <text x="60" y="52" font-size="26" font-weight="800" fill="#1a2440">The clean room</text>
+    <text x="60" y="76" font-size="14" fill="#3b4a8c">Photoshop → PhotoCraft: behaviour crosses the wall. Code never does.</text>
+    <text x="960" y="52" text-anchor="end" font-size="13" font-weight="700" letter-spacing="2" fill="#b7410e">100% RUST</text>
+
+    <!-- Card 1: the original -->
+    <g transform="translate(60 100)">
+      <rect width="200" height="150" rx="12" fill="#ffffff" stroke="#e8a04c" stroke-width="2.5"/>
+      <rect x="0" y="0" width="200" height="30" rx="12" fill="#4a3a14"/>
+      <text x="100" y="20" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f5d9a4">THE ORIGINAL</text>
+      <rect x="55" y="48" width="90" height="58" rx="8" fill="#e8a04c"/>
+      <rect x="55" y="48" width="90" height="20" rx="8" fill="#c77f2e"/>
+      <text x="100" y="63" text-anchor="middle" font-size="10" font-weight="700" fill="#4a2e08">Photoshop</text>
+      <rect x="88" y="80" width="24" height="18" rx="3" fill="#4a3a14"/>
+      <path d="M 94 80 v -6 a 6 6 0 0 1 12 0 v 6" stroke="#4a3a14" stroke-width="3" fill="none"/>
+      <text x="100" y="122" text-anchor="middle" font-size="10" fill="#4a5160">source stays sealed</text>
+      <text x="100" y="136" text-anchor="middle" font-size="10" font-weight="700" fill="#8f320a">behaviour may leave</text>
+    </g>
+
+    <!-- arrows across the wall -->
+    <line x1="266" y1="150" x2="276" y2="150" stroke="#2337ff" stroke-width="2.5" marker-end="url(#parrow)"/>
+    <line x1="266" y1="230" x2="276" y2="230" stroke="#2337ff" stroke-width="2.5" marker-end="url(#parrow)"/>
+
+    <!-- Card 2: the clean room -->
+    <g transform="translate(280 100)">
+      <rect width="200" height="150" rx="12" fill="#ffffff" stroke="#2337ff" stroke-width="2.5"/>
+      <rect x="0" y="0" width="200" height="30" rx="12" fill="#1a2440"/>
+      <text x="100" y="20" text-anchor="middle" font-size="12.5" font-weight="700" fill="#c9d4f2">THE CLEAN ROOM</text>
+      <g font-size="9.5" font-weight="700">
+        <rect x="14" y="42" width="82" height="20" rx="4" fill="#eef1f8" stroke="#4f6bff"/><text x="55" y="55" text-anchor="middle" fill="#3b55e0">PSD SPEC</text>
+        <rect x="104" y="42" width="82" height="20" rx="4" fill="#eef1f8" stroke="#4f6bff"/><text x="145" y="55" text-anchor="middle" fill="#3b55e0">ICC</text>
+        <rect x="14" y="68" width="82" height="20" rx="4" fill="#eef1f8" stroke="#4f6bff"/><text x="55" y="81" text-anchor="middle" fill="#3b55e0">ISO 32000</text>
+        <rect x="104" y="68" width="82" height="20" rx="4" fill="#eef1f8" stroke="#4f6bff"/><text x="145" y="81" text-anchor="middle" fill="#3b55e0">OBSERVATION</text>
+      </g>
+      <rect x="14" y="96" width="172" height="40" rx="6" fill="#eef7f9" stroke="#4fc3dd"/>
+      <text x="100" y="112" text-anchor="middle" font-size="9.5" font-weight="700" fill="#0d2b34">corpus of real Photoshop PSDs</text>
+      <text x="100" y="127" text-anchor="middle" font-size="9.5" fill="#0d2b34">→ the test oracles</text>
+    </g>
+
+    <line x1="486" y1="175" x2="496" y2="175" stroke="#2337ff" stroke-width="2.5" marker-end="url(#parrow)"/>
+    <line x1="486" y1="230" x2="496" y2="230" stroke="#2337ff" stroke-width="2.5" marker-end="url(#parrow)"/>
+
+    <!-- Card 3: photocraft -->
+    <g transform="translate(500 100)">
+      <rect width="200" height="150" rx="12" fill="#ffffff" stroke="#b7410e" stroke-width="2.5"/>
+      <rect x="0" y="0" width="200" height="30" rx="12" fill="#4a1505"/>
+      <text x="100" y="20" text-anchor="middle" font-size="12.5" font-weight="700" fill="#f5c9a4">PHOTOCRAFT</text>
+      <g font-size="9.5" fill="#4a5160">
+        <text x="14" y="52">pure Rust, no webview</text>
+        <text x="14" y="66">unsafe forbidden*</text>
+        <text x="14" y="80">never crash, ever</text>
+      </g>
+      <rect x="14" y="90" width="172" height="22" rx="5" fill="#f7ede6" stroke="#b7410e"/>
+      <text x="100" y="105" text-anchor="middle" font-size="10" font-weight="700" fill="#8f320a">627 / 627 menu items live</text>
+      <rect x="14" y="118" width="172" height="20" rx="5" fill="#eef1f8" stroke="#c3cbe8"/>
+      <text x="100" y="132" text-anchor="middle" font-size="9" fill="#3b4a8c">*one isolated pen-tablet crate</text>
+    </g>
+
+    <line x1="706" y1="175" x2="716" y2="175" stroke="#2337ff" stroke-width="2.5" marker-end="url(#parrow)"/>
+
+    <!-- Card 4: on atlas -->
+    <g transform="translate(720 100)">
+      <rect width="240" height="150" rx="12" fill="#ffffff" stroke="#4fc3dd" stroke-width="2.5"/>
+      <rect x="0" y="0" width="240" height="30" rx="12" fill="#0d2b34"/>
+      <text x="120" y="20" text-anchor="middle" font-size="12.5" font-weight="700" fill="#a8e2ee">SHIPPED ON ATLAS</text>
+      <g font-size="10" fill="#4a5160">
+        <text x="16" y="52">Gitea → CI → registry → Argo CD</text>
+        <text x="16" y="70">same Rust → WASM (trunk)</text>
+        <text x="16" y="88">served by nginx</text>
+      </g>
+      <rect x="16" y="100" width="208" height="26" rx="6" fill="url(#pblue)"/>
+      <text x="120" y="117" text-anchor="middle" font-size="10.5" font-weight="700" fill="#ffffff">photocraft.atlas.lan</text>
+      <text x="120" y="142" text-anchor="middle" font-size="9" fill="#3b4a8c">deployed by an agent, verified 200 OK</text>
+    </g>
+
+    <!-- bottom strip: the loop -->
+    <g transform="translate(60 290)">
+      <rect width="900" height="170" rx="12" fill="#ffffff" stroke="#c3cbe8" stroke-width="2"/>
+      <text x="24" y="34" font-size="13" font-weight="700" letter-spacing="2" fill="#3b4a8c">THE LOOP — RUN BY HUMANS AND AGENTS ALIKE</text>
+      <g font-size="11" font-weight="700">
+        <rect x="24" y="54" width="150" height="44" rx="8" fill="#eef1f8" stroke="#4f6bff"/>
+        <text x="99" y="72" text-anchor="middle" fill="#3b55e0">OBSERVE</text>
+        <text x="99" y="88" text-anchor="middle" font-size="9" font-weight="400" fill="#4a5160">what does it do?</text>
+        <rect x="206" y="54" width="150" height="44" rx="8" fill="#eef1f8" stroke="#4f6bff"/>
+        <text x="281" y="72" text-anchor="middle" fill="#3b55e0">SPECIFY</text>
+        <text x="281" y="88" text-anchor="middle" font-size="9" font-weight="400" fill="#4a5160">public specs + prose</text>
+        <rect x="388" y="54" width="150" height="44" rx="8" fill="#f7ede6" stroke="#b7410e"/>
+        <text x="463" y="72" text-anchor="middle" fill="#8f320a">IMPLEMENT</text>
+        <text x="463" y="88" text-anchor="middle" font-size="9" font-weight="400" fill="#4a5160">pure Rust commands</text>
+        <rect x="570" y="54" width="150" height="44" rx="8" fill="#eef7f9" stroke="#4fc3dd"/>
+        <text x="645" y="72" text-anchor="middle" fill="#0d2b34">VERIFY</text>
+        <text x="645" y="88" text-anchor="middle" font-size="9" font-weight="400" fill="#4a5160">PSD oracles + parity</text>
+        <rect x="752" y="54" width="124" height="44" rx="8" fill="#e6f7ec" stroke="#2e9e5b"/>
+        <text x="814" y="72" text-anchor="middle" fill="#1d6b3d">SHIP</text>
+        <text x="814" y="88" text-anchor="middle" font-size="9" font-weight="400" fill="#4a5160">tag → Argo CD</text>
+      </g>
+      <g stroke="#2337ff" stroke-width="2" marker-end="url(#parrow)">
+        <line x1="176" y1="76" x2="204" y2="76"/>
+        <line x1="358" y1="76" x2="386" y2="76"/>
+        <line x1="540" y1="76" x2="568" y2="76"/>
+        <line x1="722" y1="76" x2="750" y2="76"/>
+      </g>
+      <text x="450" y="128" text-anchor="middle" font-size="13" font-style="italic" fill="#1a2440">"Write down what it does, not what it is — then let whoever reads the spec next build it."</text>
+      <text x="450" y="150" text-anchor="middle" font-size="10" fill="#3b4a8c">every feature drivable by agents · JSON control protocol · MCP server · generated parity scorecards</text>
+    </g>
+  </g>
+</svg>

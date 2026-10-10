@@ -53,6 +53,7 @@ Blog schema: title, description, pubDate, updatedDate?, heroImage?, tags (defaul
 | atlas | 211lab/atlas | Oct 04 2026 (homelab cluster; homage naming: Titan, Turing, Hopper, Lovelace, Babbage, Memex, Minsky) |
 | threef-app | 3f-mindset/3f-app | Oct 04 2026 (org repo, 3f-mindset; discipline/integrity coaching — the Crucible companion app) |
 | website-marketing-calculator | redrhino-online/website-marketing-calculator | Jun 01 2023 (org repo, red rhino consulting practice) |
+| opencode | — (workflow post, no featured repo) | Oct 09 2026 (opencode provider setup: Codex subscription primary + opencode-runtime-fallback → openrouter/auto; server mode on Titan, aoe tmux tabs, Ralph loops) |
 | red-ideation-session | redrhino-online/red-ideation-session | UNPUBLISHED (repo transformed: live Reveal.js deck + preserved 2024-03-01 dates; blog/project artifacts pulled back to the drawing board — do not assume content exists) |
 
 ## Environment quirks (learned the hard way)
